@@ -1,0 +1,19 @@
+site_name: GSWA Supermodel
+copyright: Copyright &copy; 2022 Department of Mines, Industry Regulation & Safety
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  palette:
+    scheme: youtube
+  logo: assets/classes-icon.svg
+  # custom_dir: overrides
+nav:
+    - 'index.md'
+    - 'supermodel.md'
+    - 'background.md'
+    - 'backbone.md'
+    - 'components.md'
+    - 'vocabularies.md'
