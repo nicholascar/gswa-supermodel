@@ -8,13 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Build
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-        working-directory: ./gswasm
-        run: |
-          pip install mkdocs-material
-          mkdocs gh-deploy --force
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
