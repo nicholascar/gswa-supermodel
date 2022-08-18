@@ -6,6 +6,7 @@ extra_css:
   - stylesheets/extra.css
 theme:
   name: material
+  favicon: assets/favicon.png
   palette:
     scheme: youtube
   logo: assets/classes-icon.svg

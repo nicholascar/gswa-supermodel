@@ -15,7 +15,7 @@ This "Supermodel" is a multi-part model that is used to coordinate expressions o
 The major parts of this Supermodel are shown in the figure below.
 
 ![](assets/sm-overview.svg)  
-<div style="text-align:center;"><strong>Figure 1</strong>: Informal overview of this Supermodel and its various parts</div>
+<div style="text-align:center;"><strong>Figure:</strong> Informal overview of this Supermodel and its various parts</div>
 
 Only a few of the total Vocabularies and Component Models of this Supermodel have so far been defined.
 
