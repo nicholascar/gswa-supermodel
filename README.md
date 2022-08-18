@@ -12,7 +12,7 @@ This repository's content is available for reuse according to the [Creative Comm
 
 This content is copyright as follows:
 
-&copy; Government of Western Australia
+&copy; Government of Western Australia, 2022
 
 ## Contacts
 
