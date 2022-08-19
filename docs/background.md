@@ -19,3 +19,12 @@ https://www.w3.org/TR/prov-o/
 ## Profiles Vocabulary (PROF)
 
 https://www.w3.org/TR/dx-prof/
+
+## GeoSciML
+
+http://www.opengis.net/doc/geosciml/4.1
+
+
+## FSDF Backbone Model	
+
+https://linked.data.gov.au/def/fsdf-backbone
