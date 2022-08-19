@@ -12,15 +12,53 @@ PREFIX sdo: <https://schema.org/>
 
 @prefix bh: <https://linked.data.wa.gov.au/def/borehole/> .
 
-<https://linked.data.wa.gov.au/def/borehole/> a owl:Ontology ;
-    dcterms:title "GSWA Borehole Ontology"^^xsd:string ;
-    rdfs:label "GSWA Borehole Ontology"^^xsd:string ;
-    dcterms:publisher "Geological Survey of Western Australia" ;
-    dcterms:created "2022-06-29"^^xsd:date ;
-    dcterms:modified "2022-06-29"^^xsd:date ;
-    rdfs:comment "The Geological Survey of Western Australia's profile of several specifications to characterise a borehole."@en ;
-    dcterms:creator "David Crosswell"^^xsd:string ;
-    owl:versionInfo "0.1 draft"^^xsd:string .
+<https://linked.data.wa.gov.au/def/borehole/>
+    a owl:Ontology ;
+    sdo:name "GSWA Borehole Ontology" ;
+    sdo:publisher <https://catalogue.linked.data.gov.au/org/gswa> ;
+    sdo:dateDreated "2022-06-29"^^xsd:date ;
+    sdo:dateModified "2022-06-29"^^xsd:date ;
+    sdo:description "The Geological Survey of Western Australia's profile of several specifications to characterise a borehole."@en ;
+    sdo:creator <https://orcid.org/0000-0001-5969-4893> , <https://orcid.org/0000-0002-8742-7730> ;
+    owl:versionInfo "0.2 draft"^^xsd:string ;
+    owl:versionIRI <https://linked.data.wa.gov.au/def/borehole/0.1> ;
+.
+
+<https://catalogue.linked.data.gov.au/org/gswa>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Western Australia" ;
+    sdo:url "https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx"^^xsd:anyURI ;
+    sdo:parentOrganization <https://linked.data.gov.au/org/dmirs> ;
+.
+
+<https://linked.data.gov.au/org/dmirs>
+    a sdo:Organization ;
+    sdo:name "Department of Mines, Industry Regulation & Safety" ;
+    sdo:url "https://www.dmirs.wa.gov.au"^^xsd:anyURI ;
+    sdo:identifier "69 410 335 356" ;
+.
+
+<https://orcid.org/0000-0001-5969-4893>
+    sdo:name "David Crosswell" ;
+    sdo:email "david@crosslateral.com.au"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car"@en ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:affiliation <https://kurrawong.net> ;
+.
+
+<https://kurrawong.net>
+    a sdo:Organization ;
+    sdo:name "Kurrawong AI" ;
+    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
+    sdo:identifier "31 353 542 036" ;
+.
+
+
 
 ###########################################
 ########## Class definitions
