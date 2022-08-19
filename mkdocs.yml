@@ -16,6 +16,11 @@ nav:
     - 'supermodel.md'
     - 'background.md'
     - 'backbone.md'
-    - 'components.md'
+    - 'Component Models':
+        - 'Overview': 'components.md'
+        - 'Boreholes': 'components/boreholes-profile.md'
+        - 'Samples': 'components/samples-profile.md'
+        - 'Geological Features': 'components/geo-features-profile.md'
+        - 'Admin Features': 'components/admin-features-profile.md'
     - 'vocabularies.md'
     - 'validators.md'
