@@ -12,7 +12,14 @@
 </div>
 -->
 
-This is a model that defines a `Borehole` class and a number of supporting classes and properties for it. 
+This profile contains a model of, and supporting schemas, vocabularies validators and example data for boreholes, also known as well bores.
+
+The following figure shows some major physical elements of a borehole that this profile caters for, as well as alternative names for them, in _italics_.
+
+<figure markdown>
+  ![](../assets/boreholes-concepts.svg)
+  <figcaption>Figure BC: Borehole Concepts. A Borehole (also known as a Well) consists of one or more Bores (Wellbores) into the earth. Geology of the earth may be characterised according to Borehole Intervals (Wellbore Intervals). The Borehole starts at a single origin point on the surface of the earth which may be on land or below the sea.</figcaption>
+</figure>
 
 ## Resources
 
@@ -29,7 +36,7 @@ Profile Definition | defines this set of resources - this table and text above
 [Examples](#examples) | _[example](https://www.w3.org/TR/dx-prof/#Role:schema)_<br />valid and invalid data files
 [Code Repository](#code-repository) | _[repository](https://www.w3.org/TR/dx-prof/#Role:schema)_<br />an online repository storing all of this Profile's resources
 
-This is an interpretation of [GeoSciML](background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](background.md#geosparql) (for spatiality) and [SOSA](background.md#sensor-observation-sample-and-actuator-ontology-sosa) (for sampling features & systems) realised through this being a profile of the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), since that profiles GeoSPARQL and SOSA.
+This is an interpretation of [GeoSciML](../background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](../background.md#geosparql) (for spatiality) and [SOSA](../background.md#sensor-observation-sample-and-actuator-ontology-sosa) (for sampling features & systems) realised through this being a profile of the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), since that profiles GeoSPARQL and SOSA.
 
 This profile's dependencies, as stated above, are shown graphically, in the figure below.
 
@@ -38,18 +45,18 @@ This profile's dependencies, as stated above, are shown graphically, in the figu
   <figcaption>Figure BH: Profile hierarchy of the Boreholes Profile</figcaption>
 </figure>
 
-Given the 
+## Specification
 
-In essence, a _Borehole_ is both a kind of spatial feature - something that is somewhere - and also a thing which takes samples of something else to characterise it - samples of a portion of the earth's crust. 
+### Model Overview
 
-The figure below is an [OWL](background.md#web-ontology-language-owl) diagram of the major components within this profile, including the [Background Model](background.md) elements which they profile.
+Figure BO below is an [OWL](../background.md#web-ontology-language-owl) diagram of the major components of this profile's model. Where they match, the names of the classes in this Figure link them to the elements in the Concepts, [Figure BC](boreholes-profile.md) above.
+
+> The Key for the elements in this Figure is the [main key for this Supermodel](../supermodel.md#modelling-conventions).
 
 <figure markdown>
-  ![](../assets/boreholes-profile-overview.svg)  
-  <figcaption>Figure BO: Overview diagram of this Borehole Profile</figcaption>
+  ![](../assets/boreholes-model.svg)  
+  <figcaption>Figure BO: Overview of the model of this Borehole Profile. The Borehole class may be related to zero or more Bores which, in turn, may have zero or more Borehole Intervals. Borehole & Bores are geospatial Features and may have Geometries and Samples may be taken of Boreholes. Boreholes may be attributed to Agents (people and organisations) with the attribution qualified with Roles. A number of vocabulary-based classifiers are available for the Borehole, such as Borehole Purpose whose values are selected from controlled vocabularies supplied within this Profile.</figcaption>
 </figure>
-
-## Specification
 
 ### Classes
 

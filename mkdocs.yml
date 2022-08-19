@@ -26,3 +26,5 @@ nav:
         - 'Admin Features': 'components/admin-features-profile.md'
     - 'vocabularies.md'
     - 'validators.md'
+
+# SVG resizer: https://svg-converter.com/resize
