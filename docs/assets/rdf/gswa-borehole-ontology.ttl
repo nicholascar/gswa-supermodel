@@ -1,120 +1,118 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/elements/1.1/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
+PREFIX bh: <https://linked.data.wa.gov.au/def/borehole/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-@prefix bh: <https://linked.data.wa.gov.au/def/borehole/> .
-
-<https://linked.data.wa.gov.au/def/borehole/>
+bh:
     a owl:Ontology ;
+    dcterms:provenance "Generated for the Geological Survey of WA in 2022, informed by Samples modelling undertaken for the Department of Agriculture, Water & the Environment's Biodiversity Data Repository, the Terrestrial Ecosystems Research Network's ontologies, Geoscience Australia samples modelling and the Geological Survey of Queensland's Boreholes work" ;
+    owl:versionIRI bh:0.1 ;
+    owl:versionInfo "0.2 draft"^^xsd:string ;
+    skos:definition "The Geological Survey of Western Australia's profile of several specifications to characterise a borehole."@en ;
     skos:prefLabel "GSWA Borehole Ontology" ;
-    sdo:publisher <https://linked.data.gov.au/org/gswa> ;
+    sdo:creator
+        <https://orcid.org/0000-0001-5969-4893> ,
+        <https://orcid.org/0000-0002-8742-7730> ;
     sdo:dateCreated "2022-06-29"^^xsd:date ;
     sdo:dateIssued "2000-01-01"^^xsd:date ;
     sdo:dateModified "2022-08-19"^^xsd:date ;
-    skos:definition "The Geological Survey of Western Australia's profile of several specifications to characterise a borehole."@en ;
-    sdo:creator <https://orcid.org/0000-0001-5969-4893> , <https://orcid.org/0000-0002-8742-7730> ;
-    owl:versionInfo "0.2 draft"^^xsd:string ;
-    owl:versionIRI <https://linked.data.wa.gov.au/def/borehole/0.1> ;
-    dcterms:provenance "Generated for the Geological Survey of WA in 2022, informed by Samples modelling undertaken for the Department of Agriculture, Water & the Environment's Biodiversity Data Repository, the Terrestrial Ecosystems Research Network's ontologies, Geoscience Australia samples modelling and the Geological Survey of Queensland's Boreholes work"
+    sdo:publisher <https://linked.data.gov.au/org/gswa> ;
+.
+
+bh:GeologicalSiteType
+    a owl:ObjectProperty ;
+    skos:definition "The time period during which the borehole was drilled."@en ;
+    skos:prefLabel "had drilling time"@en ;
+    skos:usageNote "If the borehole was drilled at multiple times, add multiple :hasDrillingTime properties."@en ;
+    sdo:domainIncludes bh:Borehole ;
+.
+
+bh:generated
+    a owl:DatatypeProperty ;
+    rdfs:domain bh:Relation ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Specifies whether the relation was generated from document or extracted from the KB."@en ;
+    skos:prefLabel "Generated"@en ;
+.
+
+bh:hadDrillingTime
+    a owl:ObjectProperty ;
+    rdfs:range time:ProperInterval ;
+    skos:definition "The time period during which the borehole was drilled."@en ;
+    skos:prefLabel "had drilling time"@en ;
+    skos:usageNote "If the borehole was drilled at multiple times, add multiple :hasDrillingTime properties."@en ;
+    sdo:domainIncludes bh:Borehole ;
+.
+
+bh:hasPurpose
+    a owl:ObjectProperty ;
+    rdfs:domain bh:Borehole ;
+    rdfs:range skos:Concept ;
+    owl:imports <https://linked.data.gov.au/def/borehole-purpose/> ;
+    skos:definition "The reason for which this borehole was drilled."@en ;
+    skos:prefLabel "Purpose" ;
+    skos:usageNote "Purposes must be selected from the Borehole Purpose vocabulary. Multiple purposes may be selected. If purposes are time-bound, this should be indicated by assigning the purpose a time:hasTime property."@en ;
+.
+
+bh:operator
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasAttributedTo ;
+    skos:definition "An organisation that maintains/uses/runs the borehole."@en ;
+    skos:prefLabel "operator"@en ;
+    skos:usageNote "If the borehole was/is operated by multiple organisations, add multiple :operator properties. Different periods of operation, may have the specific operator indicated by qualifying the Entity (Borehole) / Agent (operator) relations, as per PROV-O's qualifiedAttribution pattern."@en ;
+    sdo:domainIncludes bh:Borehole ;
+.
+
+<https://kurrawong.net>
+    a sdo:Organization ;
+    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    sdo:identifier "31 353 542 036" ;
+    sdo:name "Kurrawong AI" ;
+    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/dmirs>
+    a sdo:Organization ;
+    sdo:identifier "69 410 335 356" ;
+    sdo:name "Department of Mines, Industry Regulation & Safety" ;
+    sdo:url "https://www.dmirs.wa.gov.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/gswa>
     a sdo:Organization ;
     sdo:name "Geological Survey of Western Australia" ;
-    sdo:url "https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx"^^xsd:anyURI ;
     sdo:parentOrganization <https://linked.data.gov.au/org/dmirs> ;
+    sdo:url "https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/org/dmirs>
-    a sdo:Organization ;
-    sdo:name "Department of Mines, Industry Regulation & Safety" ;
-    sdo:url "https://www.dmirs.wa.gov.au"^^xsd:anyURI ;
-    sdo:identifier "69 410 335 356" ;
+bh:GeologicalSite
+    a owl:Class ;
+    rdfs:subClassOf bh:Thing ;
+    skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
+    skos:prefLabel "Geological Site"@en ;
 .
 
 <https://orcid.org/0000-0001-5969-4893>
-    sdo:name "David Crosswell" ;
     sdo:email "david@crosslateral.com.au"^^xsd:anyURI ;
+    sdo:name "David Crosswell" ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
     a sdo:Person ;
-    sdo:name "Nicholas J. Car"@en ;
-    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
     sdo:affiliation <https://kurrawong.net> ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:name "Nicholas J. Car"@en ;
 .
 
-<https://kurrawong.net>
-    a sdo:Organization ;
-    sdo:name "Kurrawong AI" ;
-    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
-    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
-    sdo:identifier "31 353 542 036" ;
+bh:Borehole
+    a owl:Class ;
+    rdfs:subClassOf bh:GeologicalSite ;
+    skos:definition "A borehole is a narrow shaft bored in the ground. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage."@en ;
+    skos:prefLabel "Borehole"@en ;
 .
 
-###########################################
-########## Class definitions
-###########################################
-
-###  https://linked.data.wa.gov.au/def/borehole/Site
-bh:GeologicalSite a owl:Class ;
-  skos:prefLabel "Geological Site"@en ;
-  skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
-  rdfs:subClassOf bh:Thing .
-
-###  https://linked.data.wa.gov.au/def/borehole/Site
-bh:Borehole a owl:Class ;
-  skos:prefLabel "Borehole"@en ;
-  skos:definition """A borehole is a narrow shaft bored in the ground. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage."""@en ;
-  rdfs:subClassOf bh:GeologicalSite .
-
-###########################################
-########## Object Properties
-###########################################
-
-###  http://linked.data.gov.au/def/geological-sites
-bh:GeologicalSiteType a owl:ObjectProperty ;
-  skos:definition "The time period during which the borehole was drilled."@en ;
-  skos:prefLabel "had drilling time"@en ;
-  skos:usageNote "If the borehole was drilled at multiple times, add multiple :hasDrillingTime properties."@en ;
-  sdo:domainIncludes bh:Borehole .
-
-###  https://linked.data.wa.gov.au/def/borehole/hasPurpose
-bh:hasPurpose a owl:ObjectProperty ;
-  owl:imports <https://linked.data.gov.au/def/borehole-purpose/> ;
-  rdfs:domain bh:Borehole ;
-  rdfs:range skos:Concept ;
-  skos:definition "The reason for which this borehole was drilled."@en ;
-  skos:prefLabel "Purpose" ;
-  skos:usageNote "Purposes must be selected from the Borehole Purpose vocabulary. Multiple purposes may be selected. If purposes are time-bound, this should be indicated by assigning the purpose a time:hasTime property."@en .
-
-###  https://linked.data.wa.gov.au/def/borehole/hadDrillingTime
-bh:hadDrillingTime a owl:ObjectProperty ;
-  rdfs:range time:ProperInterval ;
-  skos:definition "The time period during which the borehole was drilled."@en ;
-  skos:prefLabel "had drilling time"@en ;
-  skos:usageNote "If the borehole was drilled at multiple times, add multiple :hasDrillingTime properties."@en ;
-  sdo:domainIncludes bh:Borehole .
-
-###  https://linked.data.wa.gov.au/def/borehole/operator
-bh:operator a owl:ObjectProperty ;
-    rdfs:subPropertyOf prov:wasAttributedTo ;
-    skos:definition "An organisation that maintains/uses/runs the borehole."@en ;
-    skos:prefLabel "operator"@en ;
-    skos:usageNote "If the borehole was/is operated by multiple organisations, add multiple :operator properties. Different periods of operation, may have the specific operator indicated by qualifying the Entity (Borehole) / Agent (operator) relations, as per PROV-O's qualifiedAttribution pattern."@en ;
-    sdo:domainIncludes bh:Borehole .
-
-bh:generated
-  a owl:DatatypeProperty ;
-  skos:prefLabel "Generated"@en;
-  skos:definition """Specifies whether the relation was generated from document or extracted from the KB."""@en ;
-  rdfs:domain bh:Relation;
-  rdfs:range xsd:boolean .
