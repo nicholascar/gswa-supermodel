@@ -7,6 +7,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX sdo: <https://schema.org/>
 
 @prefix bh: <https://linked.data.wa.gov.au/def/borehole/> .
 
