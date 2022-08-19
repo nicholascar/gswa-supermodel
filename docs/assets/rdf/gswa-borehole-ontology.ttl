@@ -1,4 +1,4 @@
-PREFIX bh: <https://linked.data.wa.gov.au/def/borehole/>
+PREFIX bh: <https://linked.data.gov.au/def/wa-borehole/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -8,13 +8,13 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-bh:
+<https://linked.data.gov.au/def/wa-borehole>
     a owl:Ontology ;
     dcterms:provenance "Generated for the Geological Survey of WA in 2022, informed by Samples modelling undertaken for the Department of Agriculture, Water & the Environment's Biodiversity Data Repository, the Terrestrial Ecosystems Research Network's ontologies, Geoscience Australia samples modelling and the Geological Survey of Queensland's Boreholes work" ;
     owl:versionIRI bh:0.1 ;
     owl:versionInfo "0.2 draft"^^xsd:string ;
-    skos:definition "The Geological Survey of Western Australia's profile of several specifications to characterise a borehole."@en ;
-    skos:prefLabel "GSWA Borehole Ontology" ;
+    skos:definition "The Geological Survey of Western Australia's profile of several Standards to characterise boreholes."@en ;
+    skos:prefLabel "WA Borehole Profile" ;
     sdo:creator
         <https://orcid.org/0000-0001-5969-4893> ,
         <https://orcid.org/0000-0002-8742-7730> ;
