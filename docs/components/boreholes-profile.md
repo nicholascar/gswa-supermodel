@@ -60,13 +60,120 @@ Figure BO below is an [OWL](../background.md#web-ontology-language-owl) diagram 
 
 ### Classes
 
+#### Borehole
+
 **Property** | **Value**
 --- | ---
 IRI | https://linked.data.gov.au/def/xxx/Borehole
-Name | Borehole
-Description | _Coming..._
+[Name](https://schema.org/name "sdo:name") | Borehole
+[Description](https://schema.org/description "sdo:description") | A borehole is a narrow shaft bored in the ground. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage.
+
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
+
+```
+PREFIX ex: <http://example.com/>
+PREFIX bh: <http://linked.data.gov.au/def/borehole/>
+PREFIX bsp: <http://linked.data.gov.au/def/borehole-start-point/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+ 
+ex:bh-01
+    a bh:Borehole ;
+    bh:hasOriginPosition [
+        geo:asWKT "POINT (153.083340 -27.325458)"^^geo:wktLiteral ;
+    ] ;
+    bh:hasSurfaceCircumstance bsp:natural-ground-surface ;
+    prov:wasAttributedTo [
+        prov:agent <https://orcid.org/0000-0002-8742-7730> ;
+        dcat:hadRole ex:driller ;
+    ] ;
+.
+```
+This example shows a borehole, `ex:bh-01`, with an origin position at longitude 153.083340 E & latitude 27.325458 S, a surface circumstance taken from a Geological Survey of Queensland vocabulary ("natural ground surface") and there's an attribution of the borehole to an Agent: Nicholas Car, identified by an IRI, with the role of driller.
+
+#### Bore
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/Bore
+[Name](https://schema.org/name "sdo:name") | Bore
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### Borehole Interval
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/BoreholeInterval
+[Name](https://schema.org/name "sdo:name") | Borehole Interval
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
 
 ### Properties
+
+#### has origin position
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasOriginPosition
+[Name](https://schema.org/name "sdo:name") | has origin position
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### has log element
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasLogElement
+[Name](https://schema.org/name "sdo:name") | has log element
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### has purpose
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasPurpose
+[Name](https://schema.org/name "sdo:name") | has purpose
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### has inclination
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasInclination
+[Name](https://schema.org/name "sdo:name") | has inclination
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### has surface circumstances
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasSurfaceCircumstances
+[Name](https://schema.org/name "sdo:name") | has surface circumstances
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### has status
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hasStatus
+[Name](https://schema.org/name "sdo:name") | has status
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
+
+#### had drilling method
+
+**Property** | **Value**
+--- | ---
+IRI | https://linked.data.gov.au/def/xxx/hadDrillingMethod
+[Name](https://schema.org/name "sdo:name") | had drilling method
+[Description](https://schema.org/description "sdo:description") | _Coming..._
+[Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
 
 ## Schema
 
@@ -86,4 +193,10 @@ Description | _Coming..._
     
 ```
 
-# Code Repository
+## Code Repository
+
+The Code Repository for this Boreholes Profile is the repository for the GSWA Supermodel:
+
+* <https://github.com/nicholascar/gswa-supermodel/>
+
+Within that repository, this documentation is located at `docs/components/boreholes-profile.md` and all the RDF assets at `rdf/wa-borehole`.

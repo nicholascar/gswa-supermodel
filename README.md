@@ -28,3 +28,13 @@ For other matters, please contact:
 
 **Geological Survey of Western Australia**  
 <https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx>
+
+# Technical Operations
+
+This repository uses the [MkDocs](https://www.mkdocs.org/) tool to build a static website - just HTML pages, no database etc. - from simple [Markdown](https://www.markdownguide.org/) text files and images.
+
+MkDocs uses [Python](https://www.python.org/) scripting to compile the Markdown files, images etc. into HTML. It can be run locally - on a desktop/laptop - to test documentation changes, and pushed to GitHub to be auto-deployed.
+
+To serve this content as a static site locally, run:
+
+`mkdocs serve`

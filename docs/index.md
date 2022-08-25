@@ -1,23 +1,11 @@
-The multi-part data model for the public expression of the data holdings of the [Geological Survey of Western Australia](https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx).
+This is a Supermodel: a multi-part data model for a public expression of the data holdings of the [Geological Survey of Western Australia](https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx).
 
-## Introduction
+!!! note "What is a Supermodel?"
+    The formulation of this set of models as a _Supermodel_ follows an established multi-model system, see the [Supermodel documentation](https://linked.data.gov.au/def/supermodel).
 
-This "Supermodel" is a multi-part model that is used to coordinate expressions of data from multiple systems within the Geological Survey of WA (GSWA). Specifically, this model allows for:
+    All of the parts of this Supermodel are explained and documented here: see the links on the left.
 
-* integration of data across systems
-  * for multi-system data holding analytics
-  * for system rationalisation planning
-* delivery of coordinated data
-  * taking data from multiple, internal, data sources and delivering it for public or analytics use, in a coordinated manner
-
-## Overview
-
-The major parts of this Supermodel are shown in the figure below.
-
-![](assets/sm-overview.svg)  
-<div style="text-align:center;"><strong>Figure:</strong> Informal overview of this Supermodel and its various parts</div>
-
-Only a few of the total Vocabularies and Component Models of this Supermodel have so far been defined.
+    For more details about a Supermodel's parts, see the [Supermodel Section](supermodel.md), also on the left.w
 
 ## Status
 
