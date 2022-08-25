@@ -1,18 +1,12 @@
-# WA Boreholes Profile
+# Boreholes Profile
 
-<!--
-<div style="text-align:right;">
-    <div style="float:right; text-align:left; width: 30%; border:solid 2px #10797E; padding:10px; margin-left:5px; background-color: rgb(240, 240, 240);">
-        <p>Machine-readable RDF:</p>
-        <ul>
-            <li><a href="https://raw.githubusercontent.com/nicholascar/gswa-supermodel/main/rdf/wa-borehole.ttl">Profile Definition</a></li>
-            <li><a href="">Schema</a></li>
-        </ul>
-    </div>
-</div>
--->
+This profile contains a model of, and supporting schemas, vocabularies validators and example data for **boreholes**, also known as well bores.
 
-This profile contains a model of, and supporting schemas, vocabularies validators and example data for boreholes, also known as well bores.
+The Semantic Web model component of this Profile, it's schema, is published online at:
+
+* **<https://linked.data.gov.au/def/borehole>**
+
+## Overview
 
 The following figure shows some major physical elements of a borehole that this profile caters for, as well as alternative names for them, in _italics_.
 
@@ -29,7 +23,7 @@ This Profile is made of many resources, all of which are contained in, or linked
 --- | ---
 Profile Definition | defines this set of resources - this table and text above
 [Specification](#specification) | _[specification](https://www.w3.org/TR/dx-prof/#Role:specification)_<br />defines the profile elements in human-readable form
-[Schema](#schema) | _[schema](https://www.w3.org/TR/dx-prof/#Role:schema)_<br />machine-readable version of the Specification's elements
+[Schema](#schema) | _[schema](https://www.w3.org/TR/dx-prof/#Role:schema)_<br />machine-readable version of the Specification's elements<br /><br />This is the Semantic Web model within this profile, online at <https://linked.data.gov.au/def/borehole>
 [Validator](#validators) | _[validation](https://www.w3.org/TR/dx-prof/#Role:validation)_<br />machine-executable rules to test data for conformance to this Profile
 [Compounded Validator](#validators) | _[validation](https://www.w3.org/TR/dx-prof/#Role:validation)_<br />this profile's validator & those of all dependencies in one
 [Vocabularies](#vocabularies) | _[vocabulary](https://www.w3.org/TR/dx-prof/#Role:vocabulary)_<br />defines terms used in the profile specification
@@ -51,12 +45,26 @@ This profile's dependencies, as stated above, are shown graphically, in the figu
 
 Figure BO below is an [OWL](../background.md#web-ontology-language-owl) diagram of the major components of this profile's model. Where they match, the names of the classes in this Figure link them to the elements in the Concepts, [Figure BC](boreholes-profile.md) above.
 
-> The Key for the elements in this Figure is the [main key for this Supermodel](../supermodel.md#modelling-conventions).
+> The Key for the elements in this Figure is the [figure key for this Supermodel](../supermodel.md#modelling-conventions).
 
 <figure markdown>
   ![](../assets/boreholes-model.svg)  
   <figcaption>Figure BO: Overview of the model of this Borehole Profile. The Borehole class may be related to zero or more Bores which, in turn, may have zero or more Borehole Intervals. Borehole & Bores are geospatial Features and may have Geometries and Samples may be taken of Boreholes. Boreholes may be attributed to Agents (people and organisations) with the attribution qualified with Roles. A number of vocabulary-based classifiers are available for the Borehole, such as Borehole Purpose whose values are selected from controlled vocabularies supplied within this Profile.</figcaption>
 </figure>
+
+### Namespaces
+
+The following prefixed namespaces are used in the code examples following:
+
+**Prefix** | **Namespace** | **Description**
+--- | --- | ---
+`ex:` | `http://example.com/` | Generic, non-resolvable, examples
+`bh:` | `http://linked.data.gov.au/def/borehole/` | This profile's schema/model
+`bsp:` | `http://linked.data.gov.au/def/borehole-start-point/` | Borehole Start Point vocabulary, managed by the Geological Survey of Queensland
+`dcat:` | `http://www.w3.org/ns/dcat#` | Data Catalogue vocabulary: cataloguing international standard
+`geo:` | `http://www.opengis.net/ont/geosparql#` | GeoSPARQL: Semantic Web spatial international standard
+`prov:` | `http://www.w3.org/ns/prov#` | Provenance Ontology: provenance data structures international standard
+
 
 ### Classes
 
@@ -64,20 +72,13 @@ Figure BO below is an [OWL](../background.md#web-ontology-language-owl) diagram 
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/Borehole
+IRI | [`bh:Borehole`](https://linked.data.gov.au/def/borehole/Borehole)
 [Name](https://schema.org/name "sdo:name") | Borehole
 [Description](https://schema.org/description "sdo:description") | A borehole is a narrow shaft bored in the ground. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage.
 
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
 
 ```
-PREFIX ex: <http://example.com/>
-PREFIX bh: <http://linked.data.gov.au/def/borehole/>
-PREFIX bsp: <http://linked.data.gov.au/def/borehole-start-point/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX geo: <http://www.opengis.net/ont/geosparql#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
- 
 ex:bh-01
     a bh:Borehole ;
     bh:hasOriginPosition [
@@ -96,7 +97,7 @@ This example shows a borehole, `ex:bh-01`, with an origin position at longitude 
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/Bore
+IRI | [`bh:Bore`](https://linked.data.gov.au/def/borehole/Bore)
 [Name](https://schema.org/name "sdo:name") | Bore
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -105,7 +106,7 @@ IRI | https://linked.data.gov.au/def/xxx/Bore
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/BoreholeInterval
+IRI | [`bh:BoreholeInterval`](https://linked.data.gov.au/def/borehole/BoreholeInterval)
 [Name](https://schema.org/name "sdo:name") | Borehole Interval
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -116,7 +117,7 @@ IRI | https://linked.data.gov.au/def/xxx/BoreholeInterval
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasOriginPosition
+IRI | [`bh:hasOriginPosition`](https://linked.data.gov.au/def/borehole/hasOriginPosition)
 [Name](https://schema.org/name "sdo:name") | has origin position
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -125,7 +126,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasOriginPosition
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasLogElement
+IRI | [`bh:hasLogElement`](https://linked.data.gov.au/def/borehole/hasLogElement)
 [Name](https://schema.org/name "sdo:name") | has log element
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -134,7 +135,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasLogElement
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasPurpose
+IRI | [`bh:hasPurpose`](https://linked.data.gov.au/def/borehole/hasPurpose)
 [Name](https://schema.org/name "sdo:name") | has purpose
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -143,7 +144,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasPurpose
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasInclination
+IRI | [`bh:hasInclination`](https://linked.data.gov.au/def/borehole/hasInclination)
 [Name](https://schema.org/name "sdo:name") | has inclination
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -152,7 +153,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasInclination
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasSurfaceCircumstances
+IRI | [`bh:hasSurfaceCircumstances`](https://linked.data.gov.au/def/borehole/hasSurfaceCircumstances)
 [Name](https://schema.org/name "sdo:name") | has surface circumstances
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -161,7 +162,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasSurfaceCircumstances
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hasStatus
+IRI | [`bh:hasStatus`](https://linked.data.gov.au/def/borehole/hasStatus)
 [Name](https://schema.org/name "sdo:name") | has status
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -170,7 +171,7 @@ IRI | https://linked.data.gov.au/def/xxx/hasStatus
 
 **Property** | **Value**
 --- | ---
-IRI | https://linked.data.gov.au/def/xxx/hadDrillingMethod
+IRI | [`bh:hadDrillingMethod`](https://linked.data.gov.au/def/borehole/hadDrillingMethod)
 [Name](https://schema.org/name "sdo:name") | had drilling method
 [Description](https://schema.org/description "sdo:description") | _Coming..._
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
@@ -182,6 +183,8 @@ IRI | https://linked.data.gov.au/def/xxx/hadDrillingMethod
 ## Vocabularies
 
 ## Examples
+
+This section presents complete (valid, according to this profile) RDF data examples. The first is compounded from the snippet examples from the [Specification Section](#specification) above. 
 
 ```turtle
 :x
