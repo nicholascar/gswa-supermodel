@@ -180,6 +180,34 @@ IRI | [`bh:hadDrillingMethod`](https://linked.data.gov.au/def/borehole/hadDrilli
 
 ## Validators
 
+To prove that data conforms to this Profile, it must be validated. Since all the expected data for this Profile is RDF data, [SHACL](https://www.w3.org/TR/shacl/) validation may be used. SHACL is a constraints language providing machine-executable rul formulation for RDF.
+
+This Profile presents its own validator which only includes tests for the rules specific to this profile and not those of the things this Profile is dependent on. However, a compounded validator is also given below which includes this Profile’s validator and all the dependent ones.
+
+The validator for this Profile's rules is available in machine-readable form here:
+
+* <http://linked.data.gov.au/def/borehole/validator>
+
+The individual rules tested for by the validator are given in the next subsection.
+
+The compounded validator that includes all the rules within this profile's validator and all those from Standards and other Profiles that this profile is dependent on is available in machine-redable format here:
+
+* <http://linked.data.gov.au/def/borehole/validator-compounded>
+
+Technical specification of the validation tool and help on how to perform automated validation are given in the [Validation Tools](#tools) subsection below.
+
+### Rules
+
+These are the rules checked for by this profile's validator. They are referenced by identifier in the machine-readable validator above so that validation messages are able to be linked to these rules.
+
+### Tools
+
+Coming...
+
+
+
+
+
 ## Vocabularies
 
 ## Examples
