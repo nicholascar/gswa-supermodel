@@ -48,7 +48,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ],
     [
         sdo:name "Code Repository" ;
-        prof:hasArtifact <https://linked.data.gov.au/def/borehole/repo> ;
+        prof:hasArtifact
+            <https://github.com/geological-survey-of-queensland/> ,
+            <https://github.com/nicholascar/gswa-supermodel/> ;
         prof:hasRole role:repository ;
     ] ;
     prof:isProfileOf

@@ -186,23 +186,32 @@ IRI | [`bh:hadDrillingMethod`](https://linked.data.gov.au/def/borehole/hadDrilli
 
 This section presents complete (valid, according to this profile) RDF data examples. The first is compounded from the snippet examples from the [Specification Section](#specification) above. 
 
-#### E.g. 01
-
+#### E.g. 01 [:octicons-link-external-16:](https://github.com/nicholascar/gswa-supermodel/blob/main/rdf/borehole/examples/eg-01.ttl)
 
 ```turtle
-:x
-    a gswa:Borehole ;
-    rdfs:label "Borehole X" ;
-    geo:hasGeometry [
-        geo:asWKT "POINT (123, -45)
+ex:bh-01
+    a bh:Borehole ;
+    prov:wasAttributedTo [
+        a prov:Attribution ;
+        dcat:hadRole ex:driller ;
+        prov:agent <https://orcid.org/0000-0002-8742-7730>
     ] ;
-    
+    bh:hasOriginPosition [
+        a geo:Geometry ;
+        geo:asWKT "POINT (153.083340 -27.325458)"^^geo:wktLiteral
+    ] ;
+    bh:hasSurfaceCircumstance bsp:natural-ground-surface ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:name "Nicholas J. Car"@en ;
+.
 ```
 
 ## Code Repository
 
-The Code Repository for this Boreholes Profile is the repository for the GSWA Supermodel:
+While a copy of all Borehole Profile resources are contained within the repository for the GSWA Supermodel, the home location of this profile is:
 
-* <https://github.com/nicholascar/gswa-supermodel/>
-
-Within that repository, this documentation is located at `docs/components/boreholes-profile.md` and all the RDF assets at `rdf/wa-borehole`.
+* <https://github.com/geological-survey-of-queensland/gsq-borehole-profile/>

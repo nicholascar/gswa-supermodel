@@ -7,6 +7,10 @@ extra_css:
 markdown_extensions:
   - md_in_html
   - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 theme:
   name: material
   favicon: assets/favicon.png
