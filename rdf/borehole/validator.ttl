@@ -15,7 +15,7 @@ bh:validator
     dcterms:provenance "This validator for the Borehole Profile was made within for the Geological Surveys of Western Australia and Queensland, 2022."@en ;
     owl:versionIRI <http://linked.data.gov.au/def/borehole/0.0.1> ;
     owl:versionInfo "0.0.1" ;
-    sdo:codeRespository "https://github.com/idn-au/idn-catalogue-profile/"^^xsd:anyURI ;
+    sdo:codeRepository "https://github.com/idn-au/idn-catalogue-profile/"^^xsd:anyURI ;
     sdo:copyrightHolder
         <https://linked.data.gov.au/org/gsq> ,
         <https://linked.data.gov.au/org/gswa> ;

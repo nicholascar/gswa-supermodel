@@ -1,7 +1,7 @@
 PREFIX bh: <https://linked.data.gov.au/def/borehole/>
 PREFIX bsp: <http://linked.data.gov.au/def/borehole-start-point/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX ex: <http://example.com>
+PREFIX ex: <http://example.com/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX sdo: <https://schema.org/>

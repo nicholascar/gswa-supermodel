@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/borehole/profile>
     a owl:Ontology , prof:Profile ;
     dcterms:provenance "Generated originally for the Geological Survey of Queensland in 2019 and updated for the Geological Survey of Western Australia in 2022. Informed by the GeoSciML non-Semantic Web standard, the SOSA ontology, samples modelling undertaken for the Department of Agriculture, Water & the Environment's Biodiversity Data Repository, the Terrestrial Ecosystems Research Network's ontologies and Geoscience Australia samples modelling" ;
-    sdo:codeRespository "https://github.com/geological-survey-of-queensland/gsq-borehole-profile"^^xsd:anyURI ;
+    sdo:codeRepository "https://github.com/geological-survey-of-queensland/gsq-borehole-profile"^^xsd:anyURI ;
     sdo:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
     sdo:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     sdo:copyrightYear "2022"^^xsd:gYear ;
