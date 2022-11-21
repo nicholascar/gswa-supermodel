@@ -5,13 +5,19 @@ This is a Supermodel: a multi-part data model for a public expression of the dat
 
     All of the parts of this Supermodel are explained and documented here: see the links on the left.
 
-    For more details about a Supermodel's parts, see the [Supermodel Section](supermodel.md), also on the left.w
+    For more details about a Supermodel's parts, see the [Supermodel Section](supermodel.md), also on the left.
 
 ## Status
 
-### August 2022
+### November 2022
 
-This Supermodel is at a very early stage of development. Currently, August 2022, work is progressing on the vocabularies, some aspects of the Backbone Model and the [Boreholes Profile Component Model](components.md#boreholes-profile).
+This Supermodel is at an early stage of development. Currently, as of November 2022, the following elements have been established:
+
+* [Vocabularies](vocabularies.md)
+* some aspects of the [Backbone Model](backbone.md), and the 
+* [Component Models](components.md)
+    * [Boreholes Profile](components/boreholes-profile.md) - developed
+    * [Samples Profile](components/samples-profile.md) - started
 
 ## License & Rights
 
