@@ -1,4 +1,6 @@
-This is a Supermodel: a multi-part data model for a public expression of the data holdings of the [Geological Survey of Western Australia](https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx).
+This is a Supermodel: a multi-part data Knowledge Graph model.
+
+This particular Supermodel is for a public expression of the data holdings of the [Geological Survey of Western Australia](https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx).
 
 !!! note "What is a Supermodel?"
     The formulation of this set of models as a _Supermodel_ follows an established multi-model system, see the [Supermodel documentation](https://linked.data.gov.au/def/supermodel).
@@ -9,9 +11,11 @@ This is a Supermodel: a multi-part data model for a public expression of the dat
 
 ## Status
 
-### November 2022
+### February 2022
 
-This Supermodel is at an early stage of development. Currently, as of November 2022, the following elements have been established:
+This Supermodel is for demonstration of Supermodel concepts only. 
+
+Currently, as of February 2023, the following elements have been established:
 
 * [Vocabularies](vocabularies.md)
 * some aspects of the [Backbone Model](backbone.md), and the 
