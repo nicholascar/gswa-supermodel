@@ -1,13 +1,15 @@
-This is a Supermodel: a multi-part data Knowledge Graph model.
+<h1 style="display:none;"></h1>
+## About
+
+This is a documentation website for a Supermodel: a multi-part data Knowledge Graph model.
 
 This particular Supermodel is for a public expression of the data holdings of the [Geological Survey of Western Australia](https://dmp.wa.gov.au/Geological-Survey/Geological-Survey-262.aspx).
 
-!!! note "What is a Supermodel?"
-    The formulation of this set of models as a _Supermodel_ follows an established multi-model system, see the [Supermodel documentation](https://linked.data.gov.au/def/supermodel).
-
-    All of the parts of this Supermodel are explained and documented here: see the links on the left.
-
-    For more details about a Supermodel's parts, see the [Supermodel Section](supermodel.md), also on the left.
+Question      | Answer                          
+----------- | ------------------------------------ 
+What is a Supermodel, in detail?       | See [this Supermodel's description](supermodel.md)<br />See the [generic description of a Supermodel](https://linked.data.gov.au/def/supermodel) 
+What is the status of this Supermodel? | See [Status](#status) below
+What other Supermodels are related? | See the [Related Supermodels](supermodel.md#related-supermodels) section of [this Supermodel's description](supermodel.md)
 
 ## Status
 
