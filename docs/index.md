@@ -13,14 +13,16 @@ What other Supermodels are related? | See the [Related Supermodels](supermodel.m
 
 ## Status
 
-### February 2022
+### May 2023
 
 This Supermodel is for demonstration of Supermodel concepts only. 
 
-Currently, as of February 2023, the following elements have been established:
+Currently, as of May 2023, the following elements have been established:
 
+* [Backbone Model](backbone.md)
+  * some aspects: this 
 * [Vocabularies](vocabularies.md)
-* some aspects of the [Backbone Model](backbone.md), and the 
+* some aspects of the , and the 
 * [Component Models](components.md)
     * [Boreholes Profile](components/boreholes-profile.md) - developed
     * [Samples Profile](components/samples-profile.md) - started

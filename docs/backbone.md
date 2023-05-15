@@ -2,13 +2,66 @@
 
 ## Intro
 
+<a href="../assets/backbone-overview.svg">
+<figure id="figure-bh" markdown>
+  ![](../assets/backbone-overview.svg)
+  <figcaption>Figure BO: Overview of the main classes and relations in the Backbone Model</figcaption>
+</figure>
+</a>
+
 The _Backbone Model_ of this Supermodel is the core model that all _Component Model_ instances must conform to. This means that all data in all _Component Model_ instances must pass the _Backbone Model_ validator.
 
-This model is actually a _profile_ of some _Background Models_, that is, it doesn't introduce much novel modelling but instead just selects elements from existing models and mandates particular patterns of use, such as requiring certain properties to be present. 
+This model is mostly just a _profile_ of particular _Background Models_, that is, it doesn't introduce much novel modelling but instead mainly selects elements from existing models and mandates particular patterns of use, such as requiring certain properties to be present. 
 
-For example, this Model profiles [GeoSPARQL](background.md#geosparql), a well-known model used to model spatial objects, and uses GeoSPARQL elements to represent geospatial features and their geometries with GeoSPARQL's `Feature` and `Geometry` classes respectively. This means that any element within a _Component Model_ wishing to express spatiality, which will be a `Feature` of some sort such as a Well, must do so with GeoSPARQL's `hasGeometry` that relates a `Feature` to a `Geometry`.
+For example, this Model profiles [GeoSPARQL](background.md#geosparql), a well-known model used to model spatial objects, and indicates that instances of GeoSPARQL's `Feature` class are modelled to be collected in `FeatureCollection` classes.
 
-## Profile
+This model only introduces two novel classes:
+
+* `Geological Feature`
+  * A geospatial feature that is defined by its geological properties
+* `Geological Property`
+  *  An observable quality (property, characteristic) of a Geological Feature
+
+### Examples
+
+An example of dummy data that is valid according to this BackBone Model's validator:
+
+```
+# this is a Geological Feature
+<http://example.com/gf/0001>
+    a gswa:GeologicalFeature ;
+.
+
+# the Feature above is part of a Collection
+<http://example.com/col/ABC>
+    rdfs:member <http://example.com/gf/0001>
+.
+
+# the Collection above is part of a Dataset
+# which is themed as being about Geochronology
+<http://example.com/dataset/X>
+    rdfs:member <http://example.com/col/ABC> ; 
+    # Geochronology
+    dcat:theme <https://linked.data.gov.au/def/anzsrc-for/2020/370502> ;
+.
+```
+
+An example of invalid dummy data:
+
+```
+# this is a Geological Feature
+<http://example.com/gf/0001>
+    a gswa:GeologicalFeature ;
+.
+
+# the Feature is indicated as being a member of a Dataset
+# but no Feature Collection instances are given
+<http://example.com/dataset/X>
+    rdfs:member <http://example.com/gf/0001> ;
+.
+```
+
+## Profile Definition
 
 This model is formally defined as a profile of a number of standards in the profile definition:
 
