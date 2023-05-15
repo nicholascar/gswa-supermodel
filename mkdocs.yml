@@ -25,10 +25,10 @@ nav:
     - 'backbone.md'
     - 'Component Models':
         - 'Overview': 'components.md'
-        - 'Boreholes': 'components/boreholes-profile.md'
-        - 'Samples': 'components/samples-profile.md'
-        - 'Geological Features': 'components/geo-features-profile.md'
-        - 'Admin Features': 'components/admin-features-profile.md'
+        - 'Boreholes': 'components/boreholes.md'
+        - 'Samples': 'components/samples.md'
+        - 'Geological Features': 'components/geo-features.md'
+        - 'Sites & Admin Features': 'components/sites-admin.md'
     - 'vocabularies.md'
     - 'validators.md'
 

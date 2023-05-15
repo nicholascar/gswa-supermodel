@@ -2,6 +2,10 @@
 
 This section lists the various Component Models within this Supermodel.
 
+All data created according to any of the Component Models, to be used in this Supermodel's context, _MUST_ also conform to this Supermodel's [Backbone Model](backbone.md). 
+
+Note that useful data may be created that is valid according to individual Component Models and not this Supermodels' Backbone Model for use outside this Supermodel's context.  
+
 ## Profiles
 
 Many of the Component Models here are defined as a _profile_, by which we mean that it is a model that draws from other Standard's models and constrains and extends their elements, rather than creating its own elements.
@@ -18,8 +22,7 @@ Several of the Component Models within this Supermodel are full defined here. Ot
 
 **Model** | **Domain(s)** | **Persistent Identifier** | **Notes**
 --- | --- | --- | --- 
-Borehole Profile | boreholes | `https://linked.data.gov.au/def/xxx` | Defined Here
-Samples Profile | samples, sampling | `https://linked.data.gov.au/def/xxx` | Coming...
-Geo Features Profile | geospatial spatial features | `https://linked.data.gov.au/def/xxx` | Coming...
-Admin Features Profile | administrative spatial features | `https://linked.data.gov.au/def/xxx` | Coming...
-
+[Borehole Profile](components/boreholes.md) | boreholes | `https://linked.data.gov.au/def/borehole` |
+[Samples Profile](components/samples.md) | samples, sampling | `https://linked.data.gov.au/def/xxx` | Coming...
+[Geo Features Profile](components/geo-features.md) | geospatial spatial features | `https://linked.data.gov.au/def/xxx` | Coming...
+[Sites & Admin Features Profile](components/sites-admin.md) | man-made & administrative spatial features | `https://linked.data.gov.au/def/xxx` | Coming...
