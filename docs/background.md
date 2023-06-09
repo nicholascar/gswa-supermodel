@@ -48,6 +48,8 @@ This Supermodel uses ANZGeoDCAT to represent all spatial datasets.
 
 ### VocPub
 
+#### The Vocabulary Publication Profile
+
 [https://w3id.org/profile/vocpub/spec](https://w3id.org/profile/vocpub/spec)
 
 VocPub is a profile of [SKOS](#skos) that mandates certain SKOS object structures and properties for particular classes, such as metadata for `ConceptScheme` instances that help with the publication and management of classification vocabularies.
@@ -96,7 +98,6 @@ SKOS is used for the representation of controlled lists of terms, sometimes know
 
 This supermodel uses SKOS to represent vocabularies used for the classification of other objects, for example the theme of a Dataset which is indicated by its association with a [Fields of Research Code](https://linked.data.gov.au/def/anzsrc-for/2020). The vocabulary of FoR Codes is a SKOS `Concept Hierarchy` and each Code within it a `Concept`. 
 
-
 ### Web Ontology Language (OWL)
 
 [https://www.w3.org/TR/owl2-primer/](https://www.w3.org/TR/owl2-primer/)
@@ -106,7 +107,7 @@ This supermodel uses SKOS to represent vocabularies used for the classification 
 This Supermodel and all the models within this profile hierarchy, except for GeoSciML, use OWL as their modelling language or system.
 
 
-#### Models not in the hierarchy
+## Models not in the hierarchy
 
 The following models are not included in the profile hierarchy figure above to simplicity's sake but are nonetheless profiles by this Supermodel.
 
@@ -120,7 +121,9 @@ The following models are not included in the profile hierarchy figure above to s
 This Supermodel uses PROF to define the profiles hierarchy presented on this page and to relate the Supermodel's various parts to one another, with roles, such as this documentation having the role of _specification_ and the SHACL validator the role of _validation_.
 
 
-### The Provenance Ontology (PROV)
+### PROV
+
+#### The Provenance Ontology
 
 [https://www.w3.org/TR/prov-o/](https://www.w3.org/TR/prov-o/)
 

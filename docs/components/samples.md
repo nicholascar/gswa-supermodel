@@ -1,3 +1,5 @@
+## Overview
+
 <a href="../../assets/samples-overview.svg">
 <figure id="figure-bh" markdown style="width:100%">
   ![](../assets/samples-overview.svg)
@@ -5,9 +7,42 @@
 </figure>
 </a>
 
-This Samples Model is an implementation of [SOSA](../background.md#sosa) with specific connections to other models such as [DCAT](../background.md#dcat) indicated by lining classes.
+This Samples Model is an implementation of [SOSA](../background.md#sosa)'s _Sampling_ framing to link Samples to Observations and the things they are samples of (Features), with detailed Sample properties taken from a number of non-Semantic Web models such as [GeoSciML](../background.md#geosciml) and the [IGSN Description Model](#igsn-description-model). Specific connections to other models such as [DCAT](../background.md#dcat) are also included to allow for Samples model data cataloguing.
 
-General use of this model should follow use of SOSA, however, here are a few dummy usage scenarios to demonstrate particular use.
+## Sample Details
+
+The model overview above shows the relation of Sample to other SOSA classes however the model subset below shows basic properties of just Sample.
+
+<a href="../../assets/sample-properties.svg">
+<figure id="figure-bh" markdown style="width:70%">
+  ![](../assets/sample-properties.svg)
+  <figcaption>Figure SP: Sample properties</figcaption>
+</figure>
+</a>
+
+The properties of the Sample class can be categorised in the following groups which are coloured in the figure below:
+
+* Classification properties (green)
+* Entity/Agent relations (mauve)
+* Spatio-temporality (blue)
+
+<a href="../../assets/sample-properties-coloured.svg">
+<figure id="figure-bh" markdown style="width:70%">
+  ![](../assets/sample-properties-coloured.svg)
+  <figcaption>Figure SP: Sample properties, categorised</figcaption>
+</figure>
+</a>
+
+The values for the classification properties MUST all come from controlled vocabularies of terms. The following section contains more information about the vocabularies required for use here.
+
+Entity/Agent relations are indicated using [PROV](../background.md#prov) thus if specialised roles need to be allocated to particular Agents related to a Sample, perhaps such as 'Curator' and 'Collector', the [qualified relations](https://patterns.dataincubator.org/book/qualified-relation.html) pattern and a vocabulary of roles can be used with `prov:qualifiedAttribution` as per the figure below:
+
+<a href="../../assets/sample-attribution.svg">
+<figure id="figure-bh" markdown style="width:70%">
+  ![](../assets/sample-attribution.svg)
+  <figcaption>Figure SP: Sample attribution: qualified and un-qualified forms</figcaption>
+</figure>
+</a>
 
 ## Example Scenarios
 
@@ -63,11 +98,40 @@ We can also infer that the Dataset has the theme (`dcterms:theme`) of the partic
 
 This modelling will allow users of a catalogue to discover this Observation Collection by either searching for things in the area of "Rock Unit O" or that deal with the occurrence of gold.
 
+### Sample properties
+
+For the Sample used in the previous scenarios, "Sample X" could be a rock sample, on a shelf in the rock shet, sampled by John Smith at some location and, we could have the following properties for it:
+
+<a href="../../assets/samples-ex4.svg">
+<figure id="figure-bh" markdown style="width:100%">
+  ![](../assets/samples-ex4.svg)
+  <figcaption>Figure SX2: Example Sample properties</figcaption>
+</figure>
+</a>
+
+
 ## Example Data
 
 Here is example RDF data for the union of the examples above:
 
 ```
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.com/>
+PREFIX gas: <https://linked.data.gov.au/def/gas/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX gswa: <https://linked.data.gov.au/def/gswa-supermodel/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 ex:observation-y
     a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:sample-x ;
@@ -83,6 +147,28 @@ ex:observation-y
 ex:sample-x
     a sosa:Sample ;
     sosa:isSampleOf ex:sample-n ;
+    gas:material ex:Rock ;
+    gas:samplingMethod ex:CoreDrill ;
+    sdo:additionalType ex:CoreSectionHalf ;
+    prov:qualifiedAttribution [
+        prov:agent [
+            a sdo:Person ;
+            sdo:name "John Smith" ;
+        ] ;
+        prov:hadRole ex:Collector ;
+    ] ;
+    prov:generatedAtTime [
+        a time:Instant ;
+        time:inXSDDate "2023-06-09"^^xsd:date ;
+    ] ;
+    gas:samplingLocation [
+        a geo:Geometry ;
+        geo:asWKT "POINT (...)"^^geo:wktLiteral ;
+    ] ;
+    gas:currentLocation [
+        a geo:Feature ;
+        dcterms:description "Rock Shed, Shelf 12, Box 32" ;
+    ] ;
 .
 
 ex:sample-n
@@ -121,6 +207,18 @@ ex:observation-collection-p
 .
 
 ex:company-q 
-    sdo:Organization ;
+    a sdo:Organization ;
 .
 ```
+
+## Vocabularies
+
+Blah
+
+## Mappings
+
+### IGSN Description Model
+
+<http://schema.igsn.org/description/>
+
+Blah
