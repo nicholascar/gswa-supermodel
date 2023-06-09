@@ -29,6 +29,7 @@ nav:
         - 'Geological Features': 'components/geo-features.md'
         - 'Sites & Admin Features': 'components/sites-admin.md'
         - 'Boreholes': 'components/boreholes.md'
+        - 'Mines': 'components/mines.md'
         - 'Samples': 'components/samples.md'
     - 'vocabularies.md'
     - 'validators.md'

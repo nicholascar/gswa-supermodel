@@ -25,7 +25,7 @@ Each of the models indicated in the hierarchy above are described, and this Supe
 
 "GeoSciML is a model of geological features commonly described and portrayed in geological maps, cross sections, geological reports and databases."
 
-This Supermodel uses GeoSciML indirectly: since GeoSciML is not a [Web Ontology Language](#owl)-based model, this Supermodel profiles GeoSciML be interpreting parts of its conceptual model into OWL Logical Models, such as the [Borehole Model](components/boreholes-profile.md).
+This Supermodel uses GeoSciML indirectly: since GeoSciML is not a [Web Ontology Language](#owl)-based model, this Supermodel profiles GeoSciML be interpreting parts of its conceptual model into OWL Logical Models, such as the [Borehole Model](components/boreholes.md).
 
 
 ### FSDF Backbone Model	

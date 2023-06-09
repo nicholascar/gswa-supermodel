@@ -46,10 +46,12 @@ This profile is all about "boreholes", which are sometimes known by other names,
 
 [Figure BC](#figure-bc) shows some major physical elements of a borehole that this profile caters for, as well as some of the alternative names for them, in _italics_.
 
+<a href="../../assets/boreholes-concepts.svg">
 <figure id="figure-bc" markdown>
   ![](../assets/boreholes-concepts.svg)
   <figcaption>Figure BC: Borehole Concepts. A Borehole (also known as a Well) consists of one or more Bores (Wellbores) into the earth. Geology of the earth may be characterised according to Borehole Intervals (Wellbore Intervals). The Borehole starts at a single origin point on the surface of the earth which may be on land or below the sea.</figcaption>
 </figure>
+</a>
 
 This Specification defines data classes and properties that can be used to describe boreholes in line with the concepts of the Figure above. The classes and properties are defined in a following section after the total model which uses them is introduced next.
 
@@ -57,7 +59,7 @@ This Specification defines data classes and properties that can be used to descr
 
 Knowledge Graph data models define data _classes_ with _properties_ and, sometimes _axioms_ which are logical rules that are applied to class and properties. This model, so far, only defines a few classes and properties for them, no axioms.
 
-The Figure BO below is a classes and properties diagram (formally, an [OWL](../background.md#web-ontology-language-owl) diagram) of the major components of this profile's model. Where they match, the names of the classes in this Figure link them to the elements in the Concepts, [Figure BC](boreholes-profile.md) above.
+The Figure BO below is a classes and properties diagram (formally, an [OWL](../background.md#web-ontology-language-owl) diagram) of the major components of this profile's model. Where they match, the names of the classes in this Figure link them to the elements in the Concepts, [Figure BC](#figure-bc) above.
 
 > The Key for the elements in this Figure is the [figure key for this Supermodel](../supermodel.md#modelling-conventions).
 

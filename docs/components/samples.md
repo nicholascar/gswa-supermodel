@@ -9,6 +9,8 @@
 
 This Samples Model is an implementation of [SOSA](../background.md#sosa)'s _Sampling_ framing to link Samples to Observations and the things they are samples of (Features), with detailed Sample properties taken from a number of non-Semantic Web models such as [GeoSciML](../background.md#geosciml) and the [IGSN Description Model](#igsn-description-model). Specific connections to other models such as [DCAT](../background.md#dcat) are also included to allow for Samples model data cataloguing.
 
+_**NOTE**: This model implements no new Classes or Properties of its own and thus is just a profile of other models. The Classes and Properties from other models suggested for use are shown in the Overview figure about and the sample details figures below. Note also that this model is a profile of this Supermodel's Backbone Model and thus is constrained to be valida according to that model._
+
 ## Sample Details
 
 The model overview above shows the relation of Sample to other SOSA classes however the model subset below shows basic properties of just Sample.

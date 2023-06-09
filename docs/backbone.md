@@ -2,9 +2,9 @@
 
 ## Intro
 
-<a href="../assets/backbone-overview.svg">
+<a href="assets/backbone-overview.svg">
 <figure id="figure-bh" markdown>
-  ![](../assets/backbone-overview.svg)
+  ![](assets/backbone-overview.svg)
   <figcaption>Figure BO: Overview of the main classes and relations in the Backbone Model</figcaption>
 </figure>
 </a>

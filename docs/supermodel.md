@@ -51,4 +51,4 @@ All of the models within this Supermodel are visualised with informal OWL diagra
 
 Many parts of this Supermodel, for example individual Component Models, are presented here in human-readable form (documentation) and also presented in machine-readable form for data validation and schema implementation. 
 
-Machine-readable assets are presented as _Resources_ per model. For example, the schema for the [Boreholes Profile](components/boreholes-profile.md) model is given in the [Boreholes Profile Schema](components/boreholes-profile.md#schema) section and its validators in the [Boreholes Profile Validators](components/boreholes-profile.md#validators) section.
+Machine-readable assets are presented as _Resources_ per model. For example, the schema for the [Boreholes Profile](components/boreholes.md) model is given in the [Boreholes Profile Schema](components/boreholes.md#schema) section and its validators in the [Boreholes Profile Validators](components/boreholes.md#validators) section.
