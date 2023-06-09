@@ -15,12 +15,14 @@ This model is mostly just a _profile_ of particular _Background Models_, that is
 
 For example, this Model profiles [GeoSPARQL](background.md#geosparql), a well-known model used to model spatial objects, and indicates that instances of GeoSPARQL's `Feature` class are modelled to be collected in `FeatureCollection` classes.
 
-This model only introduces two novel classes:
+This model only introduces two novel classes at the highest level:
 
 * `Geological Feature`
-  * A geospatial feature that is defined by its geological properties
+    * A geospatial `Feature` that is defined by its geological properties
 * `Geological Property`
-  *  An observable quality (property, characteristic) of a Geological Feature
+    *  An observable quality (property, characteristic) of a Geological `Feature`
+
+Specialised parts of the total modelling regime within this Supermodel are handled by _Component Models_, not this Backbone Model. For example, specialised types of man-made `Feature` are defined in the [Sites & Admin Features](components/sites-admin.md) component model.
 
 ### Examples
 

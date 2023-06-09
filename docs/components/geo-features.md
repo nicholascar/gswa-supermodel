@@ -1,5 +1,3 @@
-## Geo Features Profile
-
 <a href="../../assets/features-hierarchy.svg">
 <figure id="figure-bh" markdown style="width:50%">
   ![](../assets/features-hierarchy.svg)

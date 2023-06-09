@@ -55,7 +55,9 @@ VocPub is a profile of [SKOS](#skos) that mandates certain SKOS object structure
 This Supermodel uses VocPub to characterise all classification vocabularies.
 
 
-### Sensor, Observation, Sample, and Actuator Ontology (SOSA)
+### SOSA
+
+#### Sensor, Observation, Sample, and Actuator Ontology
 
 [https://www.w3.org/TR/vocab-ssn/](https://www.w3.org/TR/vocab-ssn/)
 
@@ -74,6 +76,8 @@ This Supermodel uses GeoSAPRQL to represent all spatial phenomena a `Feature` in
 
 
 ### DCAT
+
+#### Data Cataloguing Vocabulary
 
 [https://www.w3.org/TR/vocab-dcat/](https://www.w3.org/TR/vocab-dcat/)
 

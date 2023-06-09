@@ -12,7 +12,7 @@ The Semantic Web model component of this Profile, it's schema, is published onli
 
 ### Is Profile Of 
 
-This Profile is a specialisation of - a constraining of - several existing Standards, some of which are about boreholes and some of which are about more fundamental concepts relevant to boreholes, such as spatiality and sampling. Specifically, this Profile is an interpretation of [GeoSciML](../background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](../background.md#geosparql) (for spatiality) and [SOSA](../background.md#sensor-observation-sample-and-actuator-ontology-sosa) (for sampling features & systems) realised through this being a profile of the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), since that profiles GeoSPARQL and SOSA.
+This Profile is a specialisation of - a constraining of - several existing Standards, some of which are about boreholes and some of which are about more fundamental concepts relevant to boreholes, such as spatiality and sampling. Specifically, this Profile is an interpretation of [GeoSciML](../background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](../background.md#geosparql) (for spatiality) and [SOSA](../background.md#sosa) (for sampling features & systems) realised through this being a profile of the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), since that profiles GeoSPARQL and SOSA.
 
 The things this Profile is a profile of - the things it constrains and is dependent on - as stated above, are shown graphically, in [Figure BH](#figure-bh) below.
 
