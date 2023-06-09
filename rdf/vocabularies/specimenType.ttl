@@ -1,0 +1,290 @@
+PREFIX cs: <https://linked.data.gov.au/def/gswa-specimentype>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX st: <http://vocabulary.odm2.org/specimentype/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+st:automated
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample collected using an automated sampler"@en ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Automated"@en ;
+.
+
+st:biota
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A specimen consisting of all or part of a biological organism, including flora or fauna"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Biota"@en ;
+.
+
+st:core
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Long cylindrical cores" ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core"@en ;
+.
+
+st:coreHalfRound
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Half-cylindrical products of along-axis split of a whole round" ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core half round"@en ;
+.
+
+st:corePiece
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Material occurring between unambiguous [as curated] breaks in recovery"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core piece"@en ;
+.
+
+st:coreQuarterRound
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Quarter-cylindrical products of along-axis split of a half round"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core quarter round"@en ;
+.
+
+st:coreSection
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Arbitrarily cut segments of a \"core\"" ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core section"@en ;
+.
+
+st:coreSectionHalf
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Half-cylindrical products of along-axis split of a section or its component fragments through a selected diameter"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core section half"@en ;
+.
+
+st:coreSub-Piece
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Unambiguously mated portion of a larger piece noted for curatorial management of the material"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core sub-piece"@en ;
+.
+
+st:coreWholeRound
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Cylindrical segments of core or core section material"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Core whole round"@en ;
+.
+
+st:cuttings
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Loose, coarse, unconsolidated material suspended in drilling fluid"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cuttings"@en ;
+.
+
+st:dredge
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A group of rocks collected by dragging a dredge along the seafloor"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dredge"@en ;
+.
+
+st:foliageDigestion
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample that consists of a digestion of plant foliage" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foliage digestion"@en ;
+.
+
+st:foliageLeaching
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample that consists of leachate from foliage" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foliage leaching"@en ;
+.
+
+st:forestFloorDigestion
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample that consists of a digestion of forest floor material" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Forest floor digestion"@en ;
+.
+
+st:grab
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A sample (sometimes mechanically collected) from a deposit or area, not intended to be representative of the deposit or area"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Grab"@en ;
+.
+
+st:individualSample
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A sample that is an individual unit, including rock hand samples, a biological specimen, or a bottle of fluid"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Individual sample"@en ;
+.
+
+st:litterFallDigestion
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample that consists of a digestion of litter fall" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Litter fall digestion"@en ;
+.
+
+st:orientedCore
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Core that can be positioned on the surface in the same way that it was arranged in the borehole before extraction"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Oriented core"@en ;
+.
+
+st:other
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample does not fit any of the existing type designations. It is expected that further detailed description of the particular sample be provided"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Other"@en ;
+.
+
+st:petriDishDryDeposition
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample from dry deposition in a petri dish" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Petri dish (dry deposition)"@en ;
+.
+
+st:precipitationBulk
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Sample from bulk precipitation" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Precipitation bulk"@en ;
+.
+
+st:rockPowder
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A sample created from pulverizing a rock to powder"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rock powder"@en ;
+.
+
+st:standardReferenceSpecimen
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Standard reference specimen" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Standard reference specimen"@en ;
+.
+
+st:terrestrialSection
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "A sample of a section of the near-surface Earth, generally in the critical zone"@en ;
+    skos:historyNote "SESAR Sample type CV. See http://www.geosamples.org/help/vocabularies#object"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Terrestrial section"@en ;
+.
+
+st:theSpecimenTypeIsUnknown
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "The specimen type is unknown" ;
+    skos:historyNote "Originally from CUAHSI SampleTypeCV. See: http://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=SampleTypeCV"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "The specimen type is unknown"@en ;
+.
+
+st:thinSection
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://vocabulary.odm2.org/specimentype> ;
+    skos:definition "Thin section" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Thin section"@en ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-06-09"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gswa> ;
+    dcterms:modified "2023-06-09"^^xsd:date ;
+    skos:definition "A vocabulary for describing the type of a physical Specimen" ;
+    skos:prefLabel "ODM2 Specimen Types"@en ;
+    prov:wasDerivedFrom <http://vocabulary.odm2.org/specimentype> ;
+    skos:hasTopConcept
+        st:automated ,
+        st:biota ,
+        st:core ,
+        st:coreHalfRound ,
+        st:corePiece ,
+        st:coreQuarterRound ,
+        st:coreSection ,
+        st:coreSectionHalf ,
+        st:coreSub-Piece ,
+        st:coreWholeRound ,
+        st:cuttings ,
+        st:dredge ,
+        st:foliageDigestion ,
+        st:foliageLeaching ,
+        st:forestFloorDigestion ,
+        st:grab ,
+        st:individualSample ,
+        st:litterFallDigestion ,
+        st:orientedCore ,
+        st:other ,
+        st:petriDishDryDeposition ,
+        st:precipitationBulk ,
+        st:rockPowder ,
+        st:standardReferenceSpecimen ,
+        st:terrestrialSection ,
+        st:theSpecimenTypeIsUnknown ,
+        st:thinSection ;
+    prov:qualifiedDerivation [
+        prov:entity <http://vocabulary.odm2.org/specimentype> ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/direct> ;
+    ] ;
+.
