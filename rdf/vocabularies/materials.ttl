@@ -1,4 +1,4 @@
-PREFIX cs: <https://linked.data.gov.au/def/gswa-material-type>
+PREFIX cs: <https://linked.data.gov.au/def/gswa-sample-materials>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX gamt: <http://pid.geoscience.gov.au/def/voc/ga/materialtype/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -658,11 +658,11 @@ cs:
         gamt:unknown ,
         gamt:unspecified_seabed_materials ,
         gamt:water ;
-    skos:prefLabel "Materials"@en ;
+    skos:prefLabel "GSWA Sample Materials"@en ;
     prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/materialtype> ;
     prov:qualifiedDerivation [
-        prov:entity <http://vocabulary.odm2.org/specimentype> ;
-        prov:hadRole <http://pid.geoscience.gov.au/def/voc/ga/materialtype> ;
+        prov:entity <http://pid.geoscience.gov.au/def/voc/ga/materialtype> ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/direct> ;
     ] ;
 .
 

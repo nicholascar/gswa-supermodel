@@ -1,4 +1,4 @@
-PREFIX cs: <https://linked.data.gov.au/def/gswa-specimentype>
+PREFIX cs: <https://linked.data.gov.au/def/gswa-specimen-types>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -252,8 +252,8 @@ cs:
     dcterms:created "2023-06-09"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gswa> ;
     dcterms:modified "2023-06-09"^^xsd:date ;
-    skos:definition "A vocabulary for describing the type of a physical Specimen" ;
-    skos:prefLabel "ODM2 Specimen Types"@en ;
+    skos:definition "Types of physical Specimen" ;
+    skos:prefLabel "Specimen Types"@en ;
     prov:wasDerivedFrom <http://vocabulary.odm2.org/specimentype> ;
     skos:hasTopConcept
         st:automated ,

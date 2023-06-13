@@ -1,4 +1,4 @@
-PREFIX cs: <https://linked.data.gov.au/def/gswa-sampling-method/>
+PREFIX cs: <https://linked.data.gov.au/def/gswa-sampling-methods/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX gasm: <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -990,7 +990,7 @@ cs:
     dcterms:created "2023-06-09"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gswa> ;
     dcterms:modified "2023-06-09"^^xsd:date ;
-    skos:definition "A vocabulary for describing the method used to collect a geological sample" ;
+    skos:definition "Methods used to collect geological samples" ;
     skos:hasTopConcept
         gasm:airfall_dust_collector ,
         gasm:borehole_fluid_sampling ,
@@ -1017,7 +1017,7 @@ cs:
         gasm:unknown ,
         gasm:video_photography ,
         gasm:water_sampling ;
-    skos:prefLabel "Sampling Method Types"@en ;
+    skos:prefLabel "Sampling Methods"@en ;
     prov:qualifiedDerivation [
             prov:entity <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod> ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/direct>

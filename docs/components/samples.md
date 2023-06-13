@@ -215,12 +215,26 @@ ex:company-q
 
 ## Vocabularies
 
-Blah
+Vocabularies supporting this model and the positions within the model they occupy are listed and described below.
+
+**Vocabulary** | **Description** | **Model Position**
+--- | --- | ---
+[GSWA Sample Materials](https://linked.data.gov.au/def/gswa-sample-materials)<br /><br />Derived from [GA's Material Type](http://pid.geoscience.gov.au/def/voc/ga/materialtype) vocabulary | Types of material which samples may consist of | Range value for `gas:material` predicate used on a `Sample` instance
+[GSWA Specimen Types](https://linked.data.gov.au/def/gswa-specimen-types)<br /><br />Derived from [ODM's Specimen Type](http://vocabulary.odm2.org/specimentype) vocabulary | Types of physical Specimen | Range value for `sdo:additionalType` predicate used on a `Sample` instance
+[GSWA Sampling Methods](https://linked.data.gov.au/def/gswa-sampling-methods)<br /><br />Derived from [GA's Sampling Method](http://pid.geoscience.gov.au/def/voc/ga/samplingmethod) vocabulary | Methods used to collect geological samples | Range value for `gas:samplingMethod` predicate used on a `Sample` instance
 
 ## Mappings
+
+Mappings from this model to other initiatives are described below. 
 
 ### IGSN Description Model
 
 <http://schema.igsn.org/description/>
 
-Blah
+_Coming_
+
+### GeoSciML - GeologicSpecimenView
+
+<https://docs.ogc.org/is/16-008/16-008r1.html#443>
+
+_Coming_
