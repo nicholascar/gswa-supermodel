@@ -1,8 +1,8 @@
 ## Overview
 
-<a href="../../assets/samples-overview.svg">
+<a href="../../assets/samples-Overview.svg">
 <figure id="figure-bh" markdown style="width:100%">
-  ![](../assets/samples-overview.svg)
+  ![](../assets/samples-Overview.svg)
   <figcaption>Figure SO: Overview of the SOSA-based Samples Model</figcaption>
 </figure>
 </a>
@@ -15,9 +15,9 @@ _**NOTE**: This model implements no new Classes or Properties of its own and thu
 
 The model overview above shows the relation of Sample to other SOSA classes however the model subset below shows basic properties of just Sample.
 
-<a href="../../assets/sample-properties.svg">
+<a href="../../assets/samples-SampleProps.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/sample-properties.svg)
+  ![](../assets/samples-SampleProps.svg)
   <figcaption>Figure SP: Sample properties</figcaption>
 </figure>
 </a>
@@ -28,9 +28,9 @@ The properties of the Sample class can be categorised in the following groups wh
 * Entity/Agent relations (mauve)
 * Spatio-temporality (blue)
 
-<a href="../../assets/sample-properties-coloured.svg">
+<a href="../../assets/samples-SamplePropsColoured.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/sample-properties-coloured.svg)
+  ![](../assets/sample-samples-SamplePropsColoured.svg)
   <figcaption>Figure SP: Sample properties, categorised</figcaption>
 </figure>
 </a>
@@ -39,9 +39,9 @@ The values for the classification properties MUST all come from controlled vocab
 
 Entity/Agent relations are indicated using [PROV](../background.md#prov) thus if specialised roles need to be allocated to particular Agents related to a Sample, perhaps such as 'Curator' and 'Collector', the [qualified relations](https://patterns.dataincubator.org/book/qualified-relation.html) pattern and a vocabulary of roles can be used with `prov:qualifiedAttribution` as per the figure below:
 
-<a href="../../assets/sample-attribution.svg">
+<a href="../../assets/samples-SampleAttribution.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/sample-attribution.svg)
+  ![](../assets/samples-attributionSampleAttribution.svg)
   <figcaption>Figure SP: Sample attribution: qualified and un-qualified forms</figcaption>
 </figure>
 </a>
@@ -52,18 +52,18 @@ Entity/Agent relations are indicated using [PROV](../background.md#prov) thus if
 
 A physical rock, sediment or soil sample, "Sample X", may be taken in the field and analysed in a laboratory to determine the occurrence of gold which is found to be 124 parts per million. The act of analysis is termed an Observation - "Observation Y" - and in this case it followed the method "Procedure Z". The result and the unit of measure used are bundled into a result which is given no independent identity (a Blank Node):
 
-<a href="../../assets/samples-ex1.a.svg">
+<a href="../../assets/samples-EX1.a.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/samples-ex1.a.svg)
+  ![](../assets/samples-EX1.a.svg)
   <figcaption>Figure SX1a: Example sampling scenario showing classes and class instances</figcaption>
 </figure>
 </a>
 
 Removing all the class information to just show object relations directly:
 
-<a href="../../assets/samples-ex1.b.svg">
+<a href="../../assets/samples-EX1.b.svg">
 <figure id="figure-bh" markdown style="width:50%">
-  ![](../assets/samples-ex1.b.svg)
+  ![](../assets/samples-EX1.b.svg)
   <figcaption>Figure SX1b: Example sampling scenario showing class instances only</figcaption>
 </figure>
 </a>
@@ -72,9 +72,9 @@ Removing all the class information to just show object relations directly:
 
 For the example above, if "Sample X" was actually part of a larger sample, "Sample N", which was taken from a drillhole was drilled into "Rock Unit O" then we have:
 
-<a href="../../assets/samples-ex2.svg">
+<a href="../../assets/samples-EX2.svg">
 <figure id="figure-bh" markdown style="width:60%">
-  ![](../assets/samples-ex2.svg)
+  ![](../assets/samples-EX2.svg)
   <figcaption>Figure SX2: Example linking Sampling to Features</figcaption>
 </figure>
 </a>
@@ -85,9 +85,9 @@ In this scenario, we can infer (calculate) that "Rock Unit O" has the geological
 
 An Observation Collection is a grouping of Observations and, in this scenario, a grouping has a single supplier/creator, "Company Q". 
 
-<a href="../../assets/samples-ex3.svg">
+<a href="../../assets/samples-EX3.svg">
 <figure id="figure-bh" markdown style="width:100%">
-  ![](../assets/samples-ex3.svg)
+  ![](../assets/samples-EX3.svg)
   <figcaption>Figure SX2: Example showing cataloguing of Observations</figcaption>
 </figure>
 </a>
@@ -104,9 +104,9 @@ This modelling will allow users of a catalogue to discover this Observation Coll
 
 For the Sample used in the previous scenarios, "Sample X" could be a rock sample, on a shelf in the rock shet, sampled by John Smith at some location and, we could have the following properties for it:
 
-<a href="../../assets/samples-ex4.svg">
+<a href="../../assets/samples-EX4.svg">
 <figure id="figure-bh" markdown style="width:100%">
-  ![](../assets/samples-ex4.svg)
+  ![](../assets/samples-EX4.svg)
   <figcaption>Figure SX2: Example Sample properties</figcaption>
 </figure>
 </a>
