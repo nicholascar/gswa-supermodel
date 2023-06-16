@@ -30,7 +30,7 @@ The properties of the Sample class can be categorised in the following groups wh
 
 <a href="../../assets/samples-SamplePropsColoured.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/sample-samples-SamplePropsColoured.svg)
+  ![](../assets/samples-SamplePropsColoured.svg)
   <figcaption>Figure SP: Sample properties, categorised</figcaption>
 </figure>
 </a>
@@ -41,7 +41,7 @@ Entity/Agent relations are indicated using [PROV](../background.md#prov) thus if
 
 <a href="../../assets/samples-SampleAttribution.svg">
 <figure id="figure-bh" markdown style="width:70%">
-  ![](../assets/samples-attributionSampleAttribution.svg)
+  ![](../assets/samples-SampleAttribution.svg)
   <figcaption>Figure SP: Sample attribution: qualified and un-qualified forms</figcaption>
 </figure>
 </a>
