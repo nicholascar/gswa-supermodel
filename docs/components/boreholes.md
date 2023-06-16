@@ -102,7 +102,7 @@ IRI | [`bh:Borehole`](https://linked.data.gov.au/def/borehole/Borehole)
 [Alternate Name](https://schema.org/alternateName "sdo:alternateName") | Well, Drillhole
 [Description](https://schema.org/description "sdo:description") | A borehole is a narrow shaft, or set of shafts, bored in the ground with a common point of origin. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage.
 Expected Properties | [has origin position](#hasOriginPosition "bh:hasOriginPosition")<br />[has part](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart "dcterms:hasPart") - for linking to [Bore](#Bore) objects)<br />[was attributed to](https://www.w3.org/TR/prov-o/#wasAttributedTo "prov:wasAttributedTo") - for linking to [Agent](https://www.w3.org/TR/prov-o/#Agent) objects, via [Attribution](https://www.w3.org/TR/prov-o/#Attribution) objects<br />classification properties, e.g. [has purpose](#hasPurpose "bh:hasPurpose")
-[Provenance](http://purl.org/dc/terms/ "dcterms:provenance") | This definition for a Borehole is derived from of GeoSciML's definition for Borehole, however it is altered to cater for multi-shaft Boreholes/Wells. This is achieved by making Borehole a container class for one of more Bore objects which represent the individual shafts.    
+[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Borehole is derived from of GeoSciML's definition for Borehole, however it is altered to cater for multi-shaft Boreholes/Wells. This is achieved by making Borehole a container class for one of more Bore objects which represent the individual shafts.    
 
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
 
@@ -134,7 +134,7 @@ IRI | [`bh:Bore`](https://linked.data.gov.au/def/borehole/Bore)
 [Description](https://schema.org/description "sdo:description") | A Bore is an individual shaft drilled into the ground.
 [Scope Note](https://www.w3.org/TR/skos-reference/#notes "skos:scopeNote") | A Bore is not the overall Borehole or Well object but a distinct part of it. Every Bore must be presented in relation to a Borehole.
 Expected Properties | [has geometry](https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_property_geohasgeometry "geo:hasGeometry") - used to indicate the geometry of the Bore, perhaps as a LineString or a Polygon
-[Provenance](http://purl.org/dc/terms/provenance "dcterms:provenance") | This definition for a Bore is derived from of GeoSciML's definition for Borehole. Bore is the class assigned to represent an individual shaft whereas Borehole has been made a container class tht contains one or more Bore objects. This is to cater for multi-shaft Boreholes which are common in some industries, for example petroleum exploration where Boreholes are referred to as Wells and Bores as Wellbores.
+[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Bore is derived from of GeoSciML's definition for Borehole. Bore is the class assigned to represent an individual shaft whereas Borehole has been made a container class tht contains one or more Bore objects. This is to cater for multi-shaft Boreholes which are common in some industries, for example petroleum exploration where Boreholes are referred to as Wells and Bores as Wellbores.
 
 
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
@@ -284,13 +284,14 @@ This section lists the vocabularies that the Boreholes Profile indicates for use
 
 **Vocabulary** | **Profile access point** | **Managing Organisation**
 ---|---|---
-[Borehole Design (Inclination)](http://linked.data.gov.au/def/borehole-design) | range value of<br />[has inclination](#hasInclination) | [Geological Survey of Queensland vocabulary](https://vocabs.gsq.digital/vocabulary/)
-[Borehole Drilling Method](https://resource.geosciml.org/classifierscheme/cgi/2016.01/boreholedrillingmethod) | range value of<br />[has drilling method](#hasDrillingMethod) | [Commission for Geoscience Information](https://cgi.vocabs.ga.gov.au/vocab/)'s [GeoSciML](http://www.opengis.net/doc/geosciml/4.1) vocabulary
-[Borehole Purpose](https://linked.data.gov.au/def/borehole-purpose) | range value of<br />[has purpose](#hasPurpose) | [Geological Survey of Queensland vocabulary](https://vocabs.gsq.digital/vocabulary/)
-[Borehole Start Point](https://linked.data.gov.au/def/borehole-start-point) | range value of<br />[has surface circumstances](#hasSurfaceCircumstances) | [Geological Survey of Queensland vocabulary](https://vocabs.gsq.digital/vocabulary/)
-[Borehole Status](https://github.com/Kurrawong/gswa-vocabs/blob/main/vocabularies/borehole-statuses.ttl) | range value of<br />[has status](#hasStatus) | GSWA
-[Borehole Subtype](https://github.com/Kurrawong/gswa-vocabs/blob/main/vocabularies/borehole-subtype.ttl) | range value of<br />[type](http://purl.org/dc/terms/type "dcterms:type") for [Borehole](#Borehole) class | GSWA
-[Depth Reference](https://linked.data.gov.au/def/depth-reference) | range value of<br />[has vertical reference](#hasVerticalReference) | [Geological Survey of Queensland vocabulary](https://vocabs.gsq.digital/vocabulary/)
+Borehole Configuration<br /><br />_in preparation_ | range value of<br />[has inclination](#hasInclination) | [GSWA](https://linked.data.gov.au/org/gswa)
+Borehole Drilling Method<br /><br />extension of CGI's [Borehole Drilling Method](https://resource.geosciml.org/classifierscheme/cgi/2016.01/boreholedrillingmethod) | range value of<br />[has drilling method](#hasDrillingMethod) | [GSWA](https://linked.data.gov.au/org/gswa) / [CGI](https://linked.data.gov.au/org/cgi)
+Borehole Geometry<br /><br />_in preparation_ | so far unknown | [GSWA](https://linked.data.gov.au/org/gswa)
+[Borehole Purpose](https://linked.data.gov.au/def/borehole-purpose) | range value of<br />[has purpose](#hasPurpose) | [GSQ](https://linked.data.gov.au/org/gsq)
+[Borehole Status](https://github.com/Kurrawong/gswa-vocabs/blob/main/vocabularies/borehole-statuses.ttl) | range value of<br />[has status](#hasStatus) | [GSWA](https://linked.data.gov.au/org/gswa)
+Borehole start point setting<br /><br />derived from [Borehole Start Point](https://linked.data.gov.au/def/borehole-start-point) | range value of<br />[has surface circumstances](#hasSurfaceCircumstances) | [GSWA](https://linked.data.gov.au/org/gswa) / [GSQ](https://linked.data.gov.au/org/gsq)
+[Borehole Type](https://github.com/Kurrawong/gswa-vocabs/blob/main/vocabularies/borehole-subtype.ttl) | range value of<br />[type](http://purl.org/dc/terms/type "sdo:additionalType") for [Borehole](#Borehole) class | [GSWA](https://linked.data.gov.au/org/gswa)
+
 
 ## Examples
 
@@ -315,7 +316,7 @@ ex:bh-01
 
 <https://orcid.org/0000-0002-8742-7730>
     a sdo:Person ;
-    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:email "nick@kurrawong.ai"^^xsd:anyURI ;
     sdo:name "Nicholas J. Car"@en ;
 .
 ```
