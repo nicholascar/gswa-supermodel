@@ -1,25 +1,36 @@
-# Boreholes Profile
+# Bores Model
 
-This [_Profile_](https://www.w3.org/TR/dx-prof/#dfn-profile) is a specification of a model, data validators, supporting vocabularies and other items for the description of **boreholes**, also known as well bores, that constrains other Standards.
+<a href="../../assets/bores-model/Concepts.svg">
+<figure id="figure-bc" markdown>
+  ![](../assets/bores-model/Concepts.svg)
+  <figcaption>Figure BI: Bores Model intro figure</figcaption>
+</figure>
+</a>
 
-The various parts of this Profile are listed in the [Profile Definition Section](#profile-definition) below.
+This model describes physical, functional and operational aspects of Bores, sometimes known as Wells.
 
-The Semantic Web model component of this Profile, it's schema, is published online at a persistent web location:
+This Model is a formally-defined [_profile_](https://www.w3.org/TR/dx-prof/#dfn-profile) which is multi-part standard that includes a specification, schema, data validators, supporting vocabularies and a few other things. Also, this model _profiles_ other standards, that is it inherits and depends on elements of other standards. Data created conforming to this _profile_ will conform to the standards this model profiles.
 
-* **<https://linked.data.gov.au/def/borehole>**
+The comprehensive listing of the various parts of this profile are given in the [Profile Definition](#profile-definition) section, below.
+
+The Semantic Web model component of this profile, it's schema, is published online at a persistent web location:
+
+* **<https://linked.data.gov.au/def/bore>**
 
 ## Profile Definition
 
 ### Is Profile Of 
 
-This Profile is a specialisation of - a constraining of - several existing Standards, some of which are about boreholes and some of which are about more fundamental concepts relevant to boreholes, such as spatiality and sampling. Specifically, this Profile is an interpretation of [GeoSciML](../background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](../background.md#geosparql) (for spatiality) and [SOSA](../background.md#sosa) (for sampling features & systems) realised through this being a profile of the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), since that profiles GeoSPARQL and SOSA.
+This profile is a specialisation of - a constraining of - several existing Standards, some of which are about bores/boreholes and some of which are about more fundamental concepts relevant to bores, such as spatiality and sampling. Specifically, this profile is an interpretation of [GeoSciML](../background.md#geosciml)'s non-Semantic Web Boreholes model in Semantic Web form, with alignments to [GeoSPARQL](../background.md#geosparql) a general-purpose spatial Semantic Web standard and [SOSA](../background.md#sosa), a general Semantic Web standard for sampling features & systems. An intermediate standard is also used: the [FSDF Backbone Model](https://linked.data.gov.au/def/fsdf-backbone), which profiles GeoSPARQL and SOSA and ensures that all objects conforming to it work well with the Australian Foundational Spatial Data Framework.
 
-The things this Profile is a profile of - the things it constrains and is dependent on - as stated above, are shown graphically, in [Figure BH](#figure-bh) below.
+The things this profile is a profile of - the things it constrains and is dependent on - as stated above, are shown graphically, in [Figure BH](#figure-bh) below.
 
+<a href="../../assets/bores-model/Profiles Hierarchy.svg">
 <figure id="figure-bh" markdown>
-  ![](../assets/boreholes-hierarchy.svg)
-  <figcaption>Figure BH: Profile hierarchy of the Boreholes Profile</figcaption>
+  ![](../assets/bores-model/Profiles Hierarchy.svg)
+  <figcaption>Figure BH: Profile hierarchy of the Bores Model</figcaption>
 </figure>
+</a>
 
 ### Resources
 
@@ -42,14 +53,14 @@ This Specification is the normative statement of requirements for data to confor
 
 ### Introduction
 
-This profile is all about "boreholes", which are sometimes known by other names, such as "wells" or "drillholes". The concepts and relationships in this specification and in this Profile generally are not dependent on particular labels, and they may be used interchangeably, according to the equivalences given in the class definitions below in the [Classes Section](#classes): see the preferred and alternate labels for the classes.
+This profile is all about "bores", which are sometimes known by other names, such as "wells" or "drillholes" or even "boreholes", however in this model, "bore" is the overall thing and "borehole" is only a part. The concepts and relationships in this specification and in this Profile generally are not dependent on particular labels, and they may be used interchangeably, according to the equivalences given in the class definitions below in the [Classes Section](#classes): see the preferred and alternate labels for the classes.
 
 [Figure BC](#figure-bc) shows some major physical elements of a borehole that this profile caters for, as well as some of the alternative names for them, in _italics_.
 
-<a href="../../assets/boreholes-concepts.svg">
+<a href="../../assets/bores-model/Concepts.svg">
 <figure id="figure-bc" markdown>
-  ![](../assets/boreholes-concepts.svg)
-  <figcaption>Figure BC: Borehole Concepts. A Borehole (also known as a Well) consists of one or more Bores (Wellbores) into the earth. Geology of the earth may be characterised according to Borehole Intervals (Wellbore Intervals). The Borehole starts at a single origin point on the surface of the earth which may be on land or below the sea.</figcaption>
+  ![](../assets/bores-model/Concepts.svg)
+  <figcaption>Figure BC: Bores Concepts. A Bores (also known as a Well) consists of one or more Bores (Wellbores) into the earth. Geology of the earth may be characterised according to Borehole Intervals (Wellbore Intervals). The Bores starts at a single origin point on the surface of the earth which may be on land or below the sea.</figcaption>
 </figure>
 </a>
 
@@ -63,16 +74,18 @@ The Figure BO below is a classes and properties diagram (formally, an [OWL](../b
 
 > The Key for the elements in this Figure is the [figure key for this Supermodel](../supermodel.md#modelling-conventions).
 
+<a href="../../assets/bores-model/Overview.svg">
 <figure id="figure-bo" markdown>
-  ![](../assets/boreholes-model.svg)  
-  <figcaption>Figure BO: Overview of the model of this Borehole Profile. The Borehole class may be related to zero or more Bores which, in turn, may have zero or more Borehole Intervals. Borehole & Bores are geospatial Features and may have Geometries and Samples may be taken of Boreholes. Boreholes may be attributed to Agents (people and organisations) with the attribution qualified with Roles. A number of vocabulary-based classifiers are available for the Borehole, such as Borehole Purpose whose values are selected from controlled vocabularies supplied within this Profile.</figcaption>
+  ![](../assets/bores-model/Overview.svg)  
+  <figcaption>Figure BO: Overview of the model of this Bores Model. The Bore class may be related to zero or more Boreholes which, in turn, may have zero or more Borehole Intervals. Bores, Boreholes & Borehole Intervals are geospatial Features and may have Geometries recorded and Samples may be taken from them. Bores may be attributed to Agents (people and organisations) with the attribution qualified with Roles. A number of vocabulary-based classifiers are available for the Bore, such as Borehole Purpose whose values are selected from controlled vocabularies supplied within this Profile.</figcaption>
 </figure>
+</a>
 
 ### Namespaces
 
 Namespaces provide unique identity to elements within this Profile - classes, properties, validation shapes and example data. Prefixes for namespaces are used to assist with documentation readability.
 
-Where you see a prefix used, something like `xxx:`, it is to be replaced with the namespace for complete term definition. For example, using the table below, we can understand that `bh:Borehole` is equivalent to `http://linked.data.gov.au/def/borehole/Borehole`.
+Where you see a prefix used, something like `xxx:`, it is to be replaced with the namespace for complete term definition. For example, using the table below, we can understand that `bh:Bore` is equivalent to `http://linked.data.gov.au/def/borehole/Bore`.
 
 The following prefixed namespaces are used in class and property definition tables and the code examples following:
 
@@ -88,27 +101,27 @@ The following prefixed namespaces are used in class and property definition tabl
 `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#` | RDF Schema vocabulary: Basic structural RDF elements
 `skos:` | `http://www.w3.org/2004/02/skos/core#` | Simple Knowledge Organization System: a model for controlled vocabularies
 
-These namespaces appear at the start of RDF data files and SPARQL query files in a form similar to this table, for example in E.g. 01 [:octicons-link-external-16:](https://github.com/nicholascar/gswa-supermodel/blob/main/rdf/borehole/examples/eg-01.ttl), you can see the prefix `bh`for the Boreholes namespace on the first line: `PREFIX bh: <https://linked.data.gov.au/def/borehole/>`.
+These namespaces appear at the start of RDF data files and SPARQL query files in a form similar to this table, for example in E.g. 01 [:octicons-link-external-16:](https://github.com/nicholascar/gswa-supermodel/blob/main/rdf/borehole/examples/eg-01.ttl), you can see the prefix `bh`for the Bores namespace on the first line: `PREFIX bh: <https://linked.data.gov.au/def/borehole/>`.
 
 ### Classes
 
-#### Borehole
-<a id="Borehole"></a>
+#### Bore
+<a id="Bore"></a>
 
 **Property** | **Value**
 --- | ---
-IRI | [`bh:Borehole`](https://linked.data.gov.au/def/borehole/Borehole)
-[Name](https://schema.org/name "sdo:name") | Borehole
+IRI | [`bh:Bore`](https://linked.data.gov.au/def/borehole/Bore)
+[Name](https://schema.org/name "sdo:name") | Bore
 [Alternate Name](https://schema.org/alternateName "sdo:alternateName") | Well, Drillhole
 [Description](https://schema.org/description "sdo:description") | A borehole is a narrow shaft, or set of shafts, bored in the ground with a common point of origin. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, as a pilot hole for installing piers or underground utilities, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage.
-Expected Properties | [has origin position](#hasOriginPosition "bh:hasOriginPosition")<br />[has part](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart "dcterms:hasPart") - for linking to [Bore](#Bore) objects)<br />[was attributed to](https://www.w3.org/TR/prov-o/#wasAttributedTo "prov:wasAttributedTo") - for linking to [Agent](https://www.w3.org/TR/prov-o/#Agent) objects, via [Attribution](https://www.w3.org/TR/prov-o/#Attribution) objects<br />classification properties, e.g. [has purpose](#hasPurpose "bh:hasPurpose")
-[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Borehole is derived from of GeoSciML's definition for Borehole, however it is altered to cater for multi-shaft Boreholes/Wells. This is achieved by making Borehole a container class for one of more Bore objects which represent the individual shafts.    
+Expected Properties | [has origin position](#hasOriginPosition "bh:hasOriginPosition")<br />[has geometry](https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_property_geohasgeometry "geo:hasGeometry") - used to indicate the geometry of the Bore<br />[has part](https://schema.org/hasPart "sdo:hasPart") - for linking to [Borehole](#Borehole) objects)<br />[was attributed to](https://www.w3.org/TR/prov-o/#wasAttributedTo "prov:wasAttributedTo") - for linking to [Agent](https://www.w3.org/TR/prov-o/#Agent) objects, via [Attribution](https://www.w3.org/TR/prov-o/#Attribution) objects<br />classification properties, e.g. [has purpose](#hasPurpose "bh:hasPurpose")
+[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Bore is derived from of GeoSciML's definition for Borehole, however it is altered to cater for multi-shaft Bores/Wells. This is achieved by making Bore a container class for one of more Borehole objects which represent the individual shafts.    
 
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
 
 ```
 ex:bh-01
-    a bh:Borehole ;
+    a bh:Bore ;
     bh:hasOriginPosition [
         geo:asWKT "POINT (153.083340 -27.325458)"^^geo:wktLiteral ;
     ] ;
@@ -129,26 +142,26 @@ This example shows a borehole, `ex:bh-01`, with an origin position at longitude 
 **Property** | **Value**
 --- | ---
 IRI | [`bh:Bore`](https://linked.data.gov.au/def/borehole/Bore)
-[Name](https://schema.org/name "sdo:name") | Bore
+[Name](https://schema.org/name "sdo:name") | Borehole
 [Alternate Name](https://schema.org/alternateName "sdo:alternateName") | Wellbore
 [Description](https://schema.org/description "sdo:description") | A Bore is an individual shaft drilled into the ground.
-[Scope Note](https://www.w3.org/TR/skos-reference/#notes "skos:scopeNote") | A Bore is not the overall Borehole or Well object but a distinct part of it. Every Bore must be presented in relation to a Borehole.
-Expected Properties | [has geometry](https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_property_geohasgeometry "geo:hasGeometry") - used to indicate the geometry of the Bore, perhaps as a LineString or a Polygon
-[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Bore is derived from of GeoSciML's definition for Borehole. Bore is the class assigned to represent an individual shaft whereas Borehole has been made a container class tht contains one or more Bore objects. This is to cater for multi-shaft Boreholes which are common in some industries, for example petroleum exploration where Boreholes are referred to as Wells and Bores as Wellbores.
+[Scope Note](https://www.w3.org/TR/skos-reference/#notes "skos:scopeNote") | A Bore is not the overall Bore or Well object but a distinct part of it. Every Borehole must be presented in relation to a Bore.
+Expected Properties | [has geometry](https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_property_geohasgeometry "geo:hasGeometry") - used to indicate the geometry of the Borehole, perhaps as a LineString or a Polygon<br />[has part](https://schema.org/hasPart "sdo:hasPart") - for linking to [Borehole Interval](#BoreholeInterval) objects)
+[History Note](https://www.w3.org/TR/skos-reference/#notes "skos:historyNote") | This definition for a Bore is derived from of GeoSciML's definition for Borehole. Borehole is the class assigned to represent an individual shaft whereas Bore has been made a container class that contains one or more Borehole objects. This is to cater for multi-shaft Bores which are common in some industries, for example petroleum exploration where Bores are referred to as Wells and Boreholes as Wellbores.
 
 
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example")
 
 ```
 ex:bh-01
-    a bh:Borehole ;
+    a bh:Bore ;
     dcterms:hasPart 
         ex:b-01 , 
         ex:b-02 ;     
 .
 
 ex:b-01
-    a bh:Bore ;
+    a bh:Borehole ;
     geo:hasGeometry [
         geo:asWKT "LINESTRING (...)"^^geo:wktLiteral
     ] ;
@@ -176,6 +189,7 @@ IRI | [`bh:BoreholeInterval`](https://linked.data.gov.au/def/borehole/BoreholeIn
 IRI | [`bh:hasOriginPosition`](https://linked.data.gov.au/def/borehole/hasOriginPosition)
 [Name](https://schema.org/name "sdo:name") | has origin position
 [Description](https://schema.org/description "sdo:description") | _Coming..._
+[Domain](http://www.w3.org/2000/01/rdf-schema#domain "rdfs:domain") | [Bore](#Bore)
 [Example](https://www.w3.org/TR/skos-reference/#notes "skos:example") | 
 
 #### has log element
@@ -280,7 +294,7 @@ Coming...
 
 ## Vocabularies
 
-This section lists the vocabularies that the Boreholes Profile indicates for use. Some of these vocabularies are defined elsewhere - by other organisations and within standards - so this listing indicates how each is managed.
+This section lists the vocabularies that the Bores Model indicates for use. Some of these vocabularies are defined elsewhere - by other organisations and within standards - so this listing indicates how each is managed.
 
 **Vocabulary** | **Profile access point** | **Managing Organisation**
 ---|---|---
@@ -301,7 +315,7 @@ This section presents complete (valid, according to this profile) RDF data examp
 
 ```turtle
 ex:bh-01
-    a bh:Borehole ;
+    a bh:Bore ;
     prov:wasAttributedTo [
         a prov:Attribution ;
         dcat:hadRole ex:driller ;
@@ -323,6 +337,6 @@ ex:bh-01
 
 ## Code Repository
 
-While a copy of all Borehole Profile resources are contained within the repository for the GSWA Supermodel, the home location of this profile is:
+While a copy of all Bores Model resources are contained within the repository for the GSWA Supermodel, the home location of this profile is:
 
 * <https://github.com/geological-survey-of-queensland/gsq-borehole-profile/>

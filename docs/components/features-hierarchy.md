@@ -1,6 +1,6 @@
-<a href="../../assets/features-hierarchy.svg">
-<figure id="figure-bh" markdown style="width:50%">
-  ![](../assets/features-hierarchy.svg)
+<a href="../../assets/features-hierarchy/Hierarchy.svg">
+<figure id="figure-gfh" markdown style="width:70%">
+  ![](../assets/features-hierarchy/Hierarchy.svg)
   <figcaption>Figure GFH: A Feature class hierarchy within which this Model's elements exists</figcaption>
 </figure>
 </a>
