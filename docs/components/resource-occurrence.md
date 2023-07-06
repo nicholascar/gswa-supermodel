@@ -64,6 +64,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX qudt: <http://qudt.org/schema/qudt/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rom: <https://linked.data.gov.au/def/resource-occurrence/>
+PREFIX obsprops: <https://linked.data.gov.au/def/observable-properties/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
 
@@ -75,6 +76,7 @@ ex:ro-x
         geo:asWKT "POLYGON (( ... ))"^^geo:wktLiteral ;
         ego:evidence [
             a sosa:Observation ;
+            sosa:observedProperty obsprops:amount-of-gold ;
             sosa:hasResult [
                 a sosa:Result ;
                 rdf:value 2.0 ;
@@ -87,6 +89,7 @@ ex:ro-x
         geo:asWKT "POLYGON (( ... ))"^^geo:wktLiteral ;
         ego:evidence [
             a sosa:Observation ;
+            sosa:observedProperty obsprops:amount-of-gold ;
             sosa:hasResult [
                 a sosa:Result ;
                 rdf:value 1.0 ;
@@ -99,12 +102,50 @@ ex:ro-x
         geo:asWKT "POLYGON (( ... ))"^^geo:wktLiteral ;  
         ego:evidence [
             a sosa:Observation ;
+            sosa:observedProperty obsprops:amount-of-gold ;
             sosa:hasResult [
                 a sosa:Result ;
                 rdf:value 0.5 ;
                 qudt:unit unit:PPM ;
             ] ;
         ] ;           
+    ] ;
+.
+```
+
+An alternative example of evidence stored in data outside the direct Feature information, perhaps in an Observations dataset:
+
+```
+PREFIX ego: <https://w3id.org/idn/def/ego/>
+PREFIX ex: <http://example.com/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <https://linked.data.gov.au/def/resource-occurrence/>
+PREFIX obsprops: <https://linked.data.gov.au/def/observable-properties/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+
+
+ex:ro-x
+    a rom:ResourceOccurrence ;
+    geo:hasQualifiedGeometry ex:geom-y ;
+.
+
+ex:geom-y
+    a ego:QualifiedGeometry ;
+    geo:asWKT "POLYGON (( ... ))"^^geo:wktLiteral ;
+    ego:evidence ex:obs-z ;
+.
+
+ex:obs-z
+    a sosa:Observation ;
+    sosa:observedProperty obsprops:amount-of-gold ;
+    sosa:hasFeatureOfInterest ex:ro-x ;
+    sosa:hasResult [
+        a sosa:Result ;
+        rdf:value 2.0 ;
+        qudt:unit unit:PPM ;
     ] ;
 .
 ```
